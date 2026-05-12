@@ -5,6 +5,9 @@
   --pink: #ff2b93;
   --violet: #a85ad7;
   --blue: #2878ff;
+  --glass-fill: rgba(255, 255, 255, 0.36);
+  --glass-fill-strong: rgba(255, 255, 255, 0.52);
+  --glass-stroke: rgba(255, 255, 255, 0.68);
 }
 
 * {
@@ -18,25 +21,47 @@ html {
 }
 
 body {
+  position: relative;
+  isolation: isolate;
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 18% 10%, rgba(255, 43, 147, 0.34), transparent 28rem),
-    radial-gradient(circle at 92% 4%, rgba(40, 120, 255, 0.32), transparent 30rem),
-    linear-gradient(180deg, #fbfcff 0%, #f5f6fb 42%, #eef1f8 100%);
+    linear-gradient(120deg, rgba(255, 43, 147, 0.18), transparent 28%),
+    linear-gradient(240deg, rgba(40, 120, 255, 0.17), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(244, 247, 253, 0.92) 45%, rgba(232, 237, 247, 0.96) 100%);
 }
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -2;
+  z-index: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(17, 19, 24, 0.045) 1px, transparent 1px),
-    linear-gradient(rgba(17, 19, 24, 0.035) 1px, transparent 1px);
-  background-size: 72px 72px;
+    linear-gradient(90deg, rgba(17, 19, 24, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(17, 19, 24, 0.032) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.86), transparent 48rem);
+  background-size: 72px 72px, 72px 72px, auto;
   mask-image: linear-gradient(180deg, transparent 0%, #000 15%, #000 78%, transparent 100%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.44), transparent 36%, rgba(255, 255, 255, 0.22) 62%, transparent),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
+  opacity: 0.72;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 a {
@@ -46,28 +71,14 @@ a {
 }
 
 .site-container {
-  width: auto;
+  width: min(calc(100% - 24px), 1120px);
   max-width: 1120px;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .site-container-narrow {
   max-width: 920px;
-}
-
-@media (min-width: 1144px) {
-  .site-container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (min-width: 944px) {
-  .site-container-narrow {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 code {
@@ -79,46 +90,21 @@ code {
   font-size: 0.9em;
 }
 
-.site-orb {
-  position: fixed;
-  z-index: -1;
-  pointer-events: none;
-  border-radius: 999px;
-  filter: blur(38px);
-  opacity: 0.78;
-}
-
-.site-orb-pink {
-  width: 22rem;
-  height: 22rem;
-  left: -8rem;
-  top: 10rem;
-  background: rgba(255, 43, 147, 0.24);
-}
-
-.site-orb-blue {
-  width: 30rem;
-  height: 30rem;
-  right: -12rem;
-  top: 8rem;
-  background: rgba(40, 120, 255, 0.24);
-}
-
 .liquid-bar {
   position: relative;
   overflow: hidden;
   min-width: 0;
   color: #fff;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08)),
-    linear-gradient(120deg, rgba(8, 10, 20, 0.8), rgba(12, 18, 42, 0.72));
-  border: 1px solid rgba(255, 255, 255, 0.26);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0.12)),
+    linear-gradient(120deg, rgba(13, 18, 32, 0.58), rgba(18, 26, 54, 0.46));
+  border: 1px solid rgba(255, 255, 255, 0.42);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.25),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
-    0 24px 70px rgba(12, 18, 42, 0.22);
-  backdrop-filter: blur(26px) saturate(170%);
-  -webkit-backdrop-filter: blur(26px) saturate(170%);
+    inset 0 1px 0 rgba(255, 255, 255, 0.58),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.12),
+    0 24px 70px rgba(12, 18, 42, 0.18);
+  backdrop-filter: blur(34px) saturate(180%);
+  -webkit-backdrop-filter: blur(34px) saturate(180%);
 }
 
 .liquid-bar::before,
@@ -191,12 +177,12 @@ h3 {
   border-radius: 999px;
   padding: 0 0.85rem;
   color: rgba(17, 19, 24, 0.68);
-  background: rgba(255, 255, 255, 0.54);
+  background: var(--glass-fill-strong);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
     0 12px 34px rgba(45, 55, 72, 0.08);
-  backdrop-filter: blur(18px) saturate(150%);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  backdrop-filter: blur(24px) saturate(155%);
+  -webkit-backdrop-filter: blur(24px) saturate(155%);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -209,18 +195,18 @@ h3 {
   align-items: center;
   justify-content: center;
   min-height: 3.1rem;
-  border: 1px solid rgba(255, 255, 255, 0.58);
+  border: 1px solid var(--glass-stroke);
   border-radius: 999px;
   padding: 0 1.2rem;
   color: rgba(17, 19, 24, 0.78);
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.34)),
-    rgba(255, 255, 255, 0.32);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.24)),
+    var(--glass-fill);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.88),
-    0 18px 42px rgba(42, 49, 64, 0.12);
-  backdrop-filter: blur(22px) saturate(160%);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
+    0 18px 42px rgba(42, 49, 64, 0.1);
+  backdrop-filter: blur(28px) saturate(165%);
+  -webkit-backdrop-filter: blur(28px) saturate(165%);
   font-weight: 800;
   text-decoration: none;
   transition: transform 180ms ease, box-shadow 180ms ease;
@@ -237,8 +223,8 @@ h3 {
   border-color: rgba(255, 255, 255, 0.52);
   color: #fff;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.08)),
-    linear-gradient(135deg, var(--pink), var(--violet) 48%, var(--blue));
+    linear-gradient(135deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.1)),
+    linear-gradient(135deg, rgba(255, 43, 147, 0.86), rgba(168, 90, 215, 0.78) 48%, rgba(40, 120, 255, 0.86));
 }
 
 .phone-aura {
@@ -254,18 +240,19 @@ h3 {
 .phone-shell {
   position: relative;
   overflow: hidden;
+  width: 100%;
   aspect-ratio: 0.56;
   border: 1px solid rgba(255, 255, 255, 0.78);
   border-radius: 3rem;
   padding: 0.75rem;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.2)),
-    rgba(255, 255, 255, 0.2);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.18)),
+    rgba(255, 255, 255, 0.28);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    0 34px 90px rgba(31, 38, 60, 0.22);
-  backdrop-filter: blur(24px) saturate(155%);
-  -webkit-backdrop-filter: blur(24px) saturate(155%);
+    0 34px 90px rgba(31, 38, 60, 0.2);
+  backdrop-filter: blur(32px) saturate(165%);
+  -webkit-backdrop-filter: blur(32px) saturate(165%);
 }
 
 .phone-screen {
@@ -275,8 +262,8 @@ h3 {
   border-radius: 2.35rem;
   padding: 1.35rem;
   background:
-    radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.34), transparent 22%),
-    linear-gradient(145deg, var(--pink), var(--violet) 48%, var(--blue));
+    linear-gradient(145deg, rgba(255, 43, 147, 0.82), rgba(168, 90, 215, 0.78) 48%, rgba(40, 120, 255, 0.82)),
+    rgba(255, 255, 255, 0.18);
 }
 
 .phone-screen::after {
@@ -320,14 +307,14 @@ h3 {
   border-radius: 1.35rem;
   padding: 0.78rem;
   color: #fff;
-  background: rgba(0, 0, 0, 0.26);
+  background: rgba(0, 0, 0, 0.22);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(18px) saturate(150%);
   -webkit-backdrop-filter: blur(18px) saturate(150%);
 }
 
 .app-row-clear {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .app-row strong,
@@ -353,7 +340,7 @@ h3 {
   border-radius: 999px;
   padding: 0.42rem 0.55rem;
   color: #111318;
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.72);
   font-size: 0.68rem;
   font-weight: 800;
 }
@@ -436,15 +423,15 @@ h3 {
 
 .material-card,
 .support-card {
-  border: 1px solid rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--glass-stroke);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.5)),
-    rgba(255, 255, 255, 0.55);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.28)),
+    var(--glass-fill);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    0 18px 46px rgba(36, 45, 69, 0.08);
-  backdrop-filter: blur(12px) saturate(130%);
-  -webkit-backdrop-filter: blur(12px) saturate(130%);
+    0 18px 46px rgba(36, 45, 69, 0.07);
+  backdrop-filter: blur(26px) saturate(150%);
+  -webkit-backdrop-filter: blur(26px) saturate(150%);
 }
 
 .material-card {
@@ -495,9 +482,11 @@ h3 {
 
 .download-panel {
   background:
-    radial-gradient(circle at 0% 0%, rgba(255, 43, 147, 0.32), transparent 34%),
-    radial-gradient(circle at 100% 10%, rgba(40, 120, 255, 0.32), transparent 38%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05));
+    linear-gradient(135deg, rgba(255, 43, 147, 0.28), transparent 38%),
+    linear-gradient(235deg, rgba(40, 120, 255, 0.28), transparent 40%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.07));
+  backdrop-filter: blur(28px) saturate(155%);
+  -webkit-backdrop-filter: blur(28px) saturate(155%);
 }
 
 .download-copy {
