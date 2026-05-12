@@ -10,6 +10,23 @@
   <meta property="og:description" content="A focused VNC viewer with saved desktops, nearby discovery, private iCloud profile sync, touch controls, secure credentials, and Mac Screen Sharing support.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://glancevnc.com/">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Helvetica', 'Helvetica Neue', 'Arial', 'sans-serif']
+          },
+          colors: {
+            glassPink: '#ff2b93',
+            glassViolet: '#a85ad7',
+            glassBlue: '#2878ff'
+          }
+        }
+      }
+    };
+  </script>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -22,130 +39,81 @@
     "applicationSubCategory": "VNC viewer",
     "operatingSystem": ["iOS", "iPadOS"],
     "description": "GlanceVNC is a VNC viewer for iPhone and iPad that saves remote desktop connections, discovers nearby VNC servers, syncs saved profiles through the user's private iCloud database when available, stores passwords in Keychain, supports touch and keyboard controls, and connects directly to user-configured VNC servers.",
-    "keywords": [
-      "VNC viewer",
-      "remote desktop",
-      "iPhone VNC",
-      "iPad VNC",
-      "Mac Screen Sharing",
-      "remote keyboard",
-      "Bonjour VNC discovery",
-      "iCloud sync"
-    ],
     "publisher": {
       "@type": "Organization",
       "@id": "https://glancevnc.com/#organization",
       "name": "GlanceVNC",
       "url": "https://glancevnc.com/"
     },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://glancevnc.com/#webpage"
-    },
     "softwareHelp": "https://glancevnc.com/support.html"
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://glancevnc.com/#faq",
-    "url": "https://glancevnc.com/",
-    "name": "GlanceVNC feature FAQ",
-    "description": "Answers about GlanceVNC features, VNC connections, nearby discovery, iCloud profile sync, Keychain password storage, and Mac Screen Sharing support.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": "https://glancevnc.com/#website",
-      "name": "GlanceVNC",
-      "url": "https://glancevnc.com/"
-    },
-    "about": {
-      "@type": "MobileApplication",
-      "@id": "https://glancevnc.com/#app"
-    },
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is GlanceVNC?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "GlanceVNC is a VNC viewer for iPhone and iPad. It lets users save remote desktop connections, discover nearby VNC servers, reconnect quickly, control the remote pointer with touch gestures, and send keyboard shortcuts during a session."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does GlanceVNC connect through a cloud service?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. GlanceVNC opens a direct VNC connection to the host and port configured by the user. The app does not operate a remote desktop relay service. Saved connection profile metadata can sync through the user's private iCloud database when iCloud is available."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does GlanceVNC store VNC passwords?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "GlanceVNC stores VNC passwords in the device Keychain. Saved connection names, hosts, ports, usernames, and sign-in mode are stored locally on the device and can sync through the user's private iCloud database when iCloud is available."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What VNC sign-in methods does GlanceVNC support?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "GlanceVNC supports automatic sign-in selection, no-password VNC servers, standard VNC password authentication, Tight security, supported stream-preserving VeNCrypt subtypes, and legacy Apple Remote Desktop Mac login where the server offers it."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="GlanceVNC home">
-      <img class="brand-mark" src="assets/app-icon.svg" alt="" aria-hidden="true">
-      <span>GlanceVNC</span>
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="privacy.html">Privacy</a>
-      <a href="support.html">Support</a>
-    </nav>
+<body class="min-h-screen overflow-x-hidden bg-[#f5f6fb] text-[#111318] antialiased">
+  <div class="site-orb site-orb-pink"></div>
+  <div class="site-orb site-orb-blue"></div>
+
+  <header class="site-container sticky top-3 z-50">
+    <div class="liquid-bar flex items-center justify-between gap-3 rounded-[28px] px-3 py-3 sm:px-4">
+      <a class="flex min-w-0 items-center gap-3 text-sm font-bold text-white no-underline" href="index.html" aria-label="GlanceVNC home">
+        <img class="h-11 w-11 rounded-[14px] shadow-glow" src="assets/app-icon.svg" alt="" aria-hidden="true">
+        <span class="truncate">GlanceVNC</span>
+      </a>
+      <nav class="flex items-center gap-1 rounded-full bg-white/10 p-1 text-sm font-semibold text-white/80" aria-label="Main navigation">
+        <a class="nav-pill" href="privacy.html">Privacy</a>
+        <a class="nav-pill" href="support.html">Support</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">VNC viewer for iPhone and iPad</p>
-        <h1>GlanceVNC</h1>
-        <p class="lede">Discover nearby remote desktops, save the ones you use, keep profiles in sync with iCloud, and control your computer from iPhone or iPad with touch and keyboard tools that feel natural.</p>
-        <div class="actions">
-          <a class="button primary" href="#download">Download</a>
-          <a class="button secondary" href="support.html">Setup Help</a>
+  <main class="site-container">
+    <section class="grid min-h-[calc(100vh-92px)] items-center gap-10 py-12 md:grid-cols-[minmax(0,1fr)_390px] md:py-20 lg:gap-16">
+      <div class="max-w-3xl">
+        <p class="glass-chip mb-5 inline-flex">VNC viewer for iPhone and iPad</p>
+        <h1 class="max-w-[760px] text-[clamp(3.35rem,12vw,8.8rem)] font-black leading-[0.84] tracking-[-0.055em] text-[#111318]">GlanceVNC</h1>
+        <p class="mt-7 max-w-2xl text-balance text-xl leading-8 text-black/68 md:text-2xl md:leading-9">Discover nearby remote desktops, save the ones you use, sync profiles privately with iCloud, and control your computer with touch and keyboard tools that feel native on iPhone and iPad.</p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a class="liquid-button liquid-button-primary" href="#download">Download</a>
+          <a class="liquid-button" href="support.html">Setup Help</a>
         </div>
       </div>
-      <div class="app-preview" role="img" aria-label="GlanceVNC app preview showing saved remote desktops and a VNC session">
+
+      <div class="relative mx-auto w-full max-w-[390px]" role="img" aria-label="GlanceVNC app preview showing saved remote desktops and a VNC session">
+        <div class="phone-aura"></div>
         <div class="phone-shell">
           <div class="phone-screen">
-            <img class="preview-logo" src="assets/app-icon.svg" alt="" aria-hidden="true">
-            <div class="screen-top">
-              <span>Glance VNC</span>
-              <span class="plus">+</span>
+            <div class="flex items-center justify-between">
+              <img class="h-12 w-12 rounded-2xl shadow-glow" src="assets/app-icon.svg" alt="" aria-hidden="true">
+              <span class="liquid-icon">+</span>
             </div>
-            <div class="section-label">Saved remote desktops</div>
-            <div class="connection-card">
-              <span class="display-icon"></span>
-              <strong>Studio Mac</strong>
-              <small>192.168.1.42:5900</small>
-              <span class="connect-pill">Connect</span>
+            <div class="mt-6 flex items-end justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-[0.12em] text-white/55">Library</p>
+                <p class="text-2xl font-black tracking-[-0.04em] text-white">Remote desktops</p>
+              </div>
+              <span class="rounded-full bg-emerald-300/95 px-3 py-1 text-xs font-bold text-emerald-950">Ready</span>
             </div>
-            <div class="section-label">Nearby remote desktops</div>
-            <div class="connection-card nearby">
-              <span class="network-icon"></span>
-              <strong>Lab Workstation</strong>
-              <small>lab-workstation.local:5900</small>
-              <span class="connect-pill">Connect</span>
+
+            <div class="mt-5 space-y-3">
+              <div class="app-row">
+                <span class="display-icon"></span>
+                <div class="min-w-0">
+                  <strong>Studio Mac</strong>
+                  <small>192.168.1.42:5900</small>
+                </div>
+                <span class="row-action">Connect</span>
+              </div>
+              <div class="app-row app-row-clear">
+                <span class="network-icon"></span>
+                <div class="min-w-0">
+                  <strong>Lab Workstation</strong>
+                  <small>lab-workstation.local</small>
+                </div>
+                <span class="row-action">Add</span>
+              </div>
             </div>
-            <div class="remote-frame">
+
+            <div class="remote-canvas mt-5">
               <span></span>
               <span></span>
               <span></span>
@@ -155,70 +123,43 @@
       </div>
     </section>
 
-    <section class="content-block" aria-labelledby="features-title">
-      <div class="section-heading">
-        <p class="eyebrow">Features</p>
-        <h2 id="features-title">Remote access without the fuss</h2>
-        <p>GlanceVNC keeps the everyday workflow simple: find a computer, save it, reconnect when you need it, and keep the session tools close at hand.</p>
+    <section class="py-14 md:py-20" aria-labelledby="features-title">
+      <div class="max-w-3xl">
+        <p class="glass-chip mb-4 inline-flex">Feature Set</p>
+        <h2 id="features-title" class="text-balance text-4xl font-black tracking-[-0.045em] text-[#111318] md:text-6xl">Remote access that stays out of the way.</h2>
+        <p class="mt-5 text-lg leading-8 text-black/62">The content layer stays calm and readable. Controls float above it, matching Apple’s Liquid Glass hierarchy without turning every surface into glass.</p>
       </div>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <span class="feature-icon">01</span>
-          <h3>Saved computers</h3>
-          <p>Add each remote computer once, give it a friendly name, and reconnect from a library sorted by recent use.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-icon">02</span>
-          <h3>Nearby discovery</h3>
-          <p>Find VNC servers advertised on your local network with Bonjour, then use the discovered host and port to create a saved connection.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-icon">03</span>
-          <h3>Private iCloud profile sync</h3>
-          <p>Saved desktop profiles can sync through your private iCloud database so your connection list follows you across devices.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-icon">04</span>
-          <h3>Passwords stay protected</h3>
-          <p>Saved passwords are kept in the Apple Keychain on your device, separate from synced profile details.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-icon">05</span>
-          <h3>Works with Mac Screen Sharing</h3>
-          <p>Connect to Macs that allow VNC viewers in Screen Sharing, with guidance when modern Apple-only sign-in is offered.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-icon">06</span>
-          <h3>Natural touch controls</h3>
-          <p>Choose hybrid, touch, or trackpad-style input, then click, drag, right click, scroll, pinch zoom, and double tap your way around.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-icon">07</span>
-          <h3>Helpful keyboard tools</h3>
-          <p>Open the keyboard when you need text, modifiers, arrows, function keys, clipboard actions, Spotlight, Mission Control, or app switching.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-icon">08</span>
-          <h3>Broad VNC compatibility</h3>
-          <p>Supports RFB 3.3 through 3.8, Tight and VeNCrypt negotiation, common compressed encodings, cursor updates, clipboard text, and remote resize where servers allow it.</p>
-        </article>
+
+      <div class="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="material-card"><span>01</span><h3>Saved computers</h3><p>Add each remote computer once, give it a friendly name, and reconnect from a recent library.</p></article>
+        <article class="material-card"><span>02</span><h3>Nearby discovery</h3><p>Find Bonjour VNC servers on your local network and turn discovered hosts into saved connections.</p></article>
+        <article class="material-card"><span>03</span><h3>Private iCloud sync</h3><p>Connection profile metadata can follow you across devices through your private iCloud database.</p></article>
+        <article class="material-card"><span>04</span><h3>Keychain passwords</h3><p>Saved VNC passwords stay in the Apple Keychain on each device, separate from synced profiles.</p></article>
+        <article class="material-card"><span>05</span><h3>Mac Screen Sharing</h3><p>Connect to Macs that allow VNC viewers, with practical guidance for Apple sign-in differences.</p></article>
+        <article class="material-card"><span>06</span><h3>Touch control modes</h3><p>Use hybrid, touch, or trackpad-style input for pointer movement, clicks, drags, scroll, and zoom.</p></article>
+        <article class="material-card"><span>07</span><h3>Keyboard tools</h3><p>Send text, modifiers, arrows, function keys, clipboard actions, and common Mac shortcuts.</p></article>
+        <article class="material-card"><span>08</span><h3>Broad RFB support</h3><p>Supports RFB 3.3 through 3.8, Tight, VeNCrypt negotiation, compressed encodings, cursor updates, and resize.</p></article>
       </div>
     </section>
 
-    <section id="download" class="download-block" aria-labelledby="download-title">
-      <div>
-        <p class="eyebrow">Availability</p>
-        <h2 id="download-title">Download GlanceVNC</h2>
-        <p>The App Store link will be added here when GlanceVNC is available. Privacy details, setup help, and support answers are already published for review.</p>
+    <section id="download" class="my-10 overflow-hidden rounded-[34px] bg-[#111318] p-1 shadow-2xl shadow-black/20" aria-labelledby="download-title">
+      <div class="download-panel grid gap-6 rounded-[30px] p-6 md:grid-cols-[1fr_auto] md:items-center md:p-8">
+        <div>
+          <p class="glass-chip mb-4 inline-flex">Availability</p>
+          <h2 id="download-title" class="text-3xl font-black tracking-[-0.04em] text-white md:text-5xl">Download GlanceVNC</h2>
+          <p class="download-copy mt-4 max-w-2xl text-base leading-7">The App Store link will be added here when GlanceVNC is available. Privacy details, setup help, and support answers are already published for review.</p>
+        </div>
+        <span class="liquid-button liquid-button-primary pointer-events-none opacity-80" aria-label="App Store link coming soon">App Store link coming soon</span>
       </div>
-      <span class="button primary disabled" aria-label="App Store link coming soon">App Store link coming soon</span>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-container flex flex-col gap-3 py-10 text-sm text-black/52 sm:flex-row sm:items-center sm:justify-between">
     <span>&copy; 2026 GlanceVNC.</span>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="support.html">Support</a>
+    <span class="flex gap-5">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </span>
   </footer>
 </body>
 </html>
