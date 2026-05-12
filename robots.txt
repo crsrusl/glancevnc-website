@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://glancevnc.app/sitemap.xml
+Sitemap: https://glancevnc.com/sitemap.xml
