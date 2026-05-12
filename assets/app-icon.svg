@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="GlanceVNC app icon">
+  <defs>
+    <linearGradient id="backgroundGradient" x1="512" y1="0" x2="512" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff2b93"/>
+      <stop offset="0.48" stop-color="#a85ad7"/>
+      <stop offset="1" stop-color="#2878ff"/>
+    </linearGradient>
+    <linearGradient id="panelGradient" x1="280" y1="258" x2="752" y2="748" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fb2c98"/>
+      <stop offset="0.48" stop-color="#a654d8"/>
+      <stop offset="1" stop-color="#5373f1"/>
+    </linearGradient>
+    <clipPath id="frontPanelClip">
+      <rect x="282" y="266" width="460" height="492" rx="52"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#backgroundGradient)"/>
+
+  <rect x="188" y="360" width="648" height="492" rx="112" fill="#000000"/>
+
+  <g clip-path="url(#frontPanelClip)">
+    <rect x="282" y="266" width="460" height="492" rx="52" fill="url(#panelGradient)"/>
+    <rect x="282" y="370" width="460" height="92" rx="22" fill="#000000"/>
+  </g>
+
+  <path fill="#ffffff" fill-rule="evenodd" d="M300 174H724C786 174 836 224 836 286V542C836 604 786 654 724 654H300C238 654 188 604 188 542V286C188 224 238 174 300 174ZM310 266H714C730 266 742 279 742 294V532C742 548 730 560 714 560H310C294 560 282 548 282 532V294C282 279 294 266 310 266Z"/>
+</svg>

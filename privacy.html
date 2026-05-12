@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy - GlanceVNC</title>
+  <meta name="description" content="GlanceVNC privacy policy: what data is stored locally, what saved profile metadata can sync with private iCloud, how VNC credentials are protected, and how direct VNC connections work.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://glancevnc.app/privacy.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://glancevnc.app/privacy.html#webpage",
+    "name": "GlanceVNC Privacy Policy",
+    "description": "Privacy policy for GlanceVNC, including local connection profile storage, private iCloud profile sync, Keychain password storage, direct VNC connections, nearby discovery, and data deletion.",
+    "url": "https://glancevnc.app/privacy.html",
+    "inLanguage": "en",
+    "dateModified": "2026-05-12",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://glancevnc.app/#website",
+      "name": "GlanceVNC",
+      "url": "https://glancevnc.app/"
+    },
+    "about": [
+      {
+        "@type": "MobileApplication",
+        "@id": "https://glancevnc.app/#app",
+        "name": "GlanceVNC"
+      },
+      {
+        "@type": "Thing",
+        "name": "Privacy policy"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://glancevnc.app/#organization",
+      "name": "GlanceVNC"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="GlanceVNC home">
+      <img class="brand-mark" src="assets/app-icon.svg" alt="" aria-hidden="true">
+      <span>GlanceVNC</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <p class="eyebrow">Last updated: May 12, 2026</p>
+      <h1>Privacy Policy</h1>
+      <p class="lede">GlanceVNC is designed for direct VNC connections. The app does not require a GlanceVNC account, does not run a remote desktop relay, and does not collect analytics in the app.</p>
+    </section>
+
+    <section class="policy-list" aria-label="Privacy policy details">
+      <article>
+        <h2>What data does GlanceVNC collect?</h2>
+        <p>GlanceVNC does not collect personal data for the developer. The app stores the information you enter for saved VNC connections locally on your device and can sync saved profile metadata through your private iCloud database when iCloud is available.</p>
+      </article>
+      <article>
+        <h2>What data is stored on the device?</h2>
+        <p>Saved connection profiles may include a connection name, host or IP address, port, optional username, chosen sign-in method, creation date, and last connected date. These profiles are stored locally in the app's Application Support storage.</p>
+      </article>
+      <article>
+        <h2>What data syncs with iCloud?</h2>
+        <p>Saved profile metadata may sync through Apple's CloudKit service in your private iCloud database. This can include the connection name, host, port, optional username, sign-in method, creation date, updated date, and last connected date. VNC passwords are not included in synced profiles.</p>
+      </article>
+      <article>
+        <h2>How are passwords secured?</h2>
+        <p>VNC passwords are stored in the Apple Keychain on your device using this-device-only Keychain accessibility. Passwords are not stored inside the connection profile file.</p>
+      </article>
+      <article>
+        <h2>How does nearby discovery use the network?</h2>
+        <p>GlanceVNC can browse the local network for Bonjour VNC services advertised as <code>_rfb._tcp.</code>. Discovery results are used in the app to help create a connection and are not sent to the developer.</p>
+      </article>
+      <article>
+        <h2>How are VNC connections used?</h2>
+        <p>When you connect, GlanceVNC opens a direct TCP connection to the host and port you configured. Authentication details are sent directly to that VNC server as part of the VNC sign-in process.</p>
+      </article>
+      <article>
+        <h2>Does GlanceVNC send remote desktop content to the developer?</h2>
+        <p>No. Remote desktop frames are displayed in the app during your VNC session. GlanceVNC does not send your remote screen content, host list, usernames, or passwords to the developer.</p>
+      </article>
+      <article>
+        <h2>Does GlanceVNC use tracking, analytics, or advertising?</h2>
+        <p>No. GlanceVNC does not include third-party advertising, tracking SDKs, or in-app analytics collection.</p>
+      </article>
+      <article>
+        <h2>How can I delete my data?</h2>
+        <p>You can delete saved connections in the app. Deleting a saved connection removes its local profile, deletes the associated password from Keychain, and syncs the deletion marker through iCloud when profile sync is available.</p>
+      </article>
+      <article>
+        <h2>Contact</h2>
+        <p>For privacy questions, contact <a href="mailto:support@glancevnc.app">support@glancevnc.app</a>.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 GlanceVNC.</span>
+    <a href="index.html">Home</a>
+    <a href="support.html">Support</a>
+  </footer>
+</body>
+</html>

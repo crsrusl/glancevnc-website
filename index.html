@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GlanceVNC - Fast VNC viewer for iPhone and iPad</title>
+  <meta name="description" content="GlanceVNC is a VNC viewer for iPhone and iPad with saved desktops, nearby VNC discovery, private iCloud profile sync, Keychain passwords, touch controls, keyboard tools, and broad RFB compatibility.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="GlanceVNC">
+  <meta property="og:description" content="A focused VNC viewer with saved desktops, nearby discovery, private iCloud profile sync, touch controls, secure credentials, and Mac Screen Sharing support.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://glancevnc.app/">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "@id": "https://glancevnc.app/#app",
+    "name": "GlanceVNC",
+    "url": "https://glancevnc.app/",
+    "applicationCategory": "UtilitiesApplication",
+    "applicationSubCategory": "VNC viewer",
+    "operatingSystem": ["iOS", "iPadOS"],
+    "description": "GlanceVNC is a VNC viewer for iPhone and iPad that saves remote desktop connections, discovers nearby VNC servers, syncs saved profiles through the user's private iCloud database when available, stores passwords in Keychain, supports touch and keyboard controls, and connects directly to user-configured VNC servers.",
+    "keywords": [
+      "VNC viewer",
+      "remote desktop",
+      "iPhone VNC",
+      "iPad VNC",
+      "Mac Screen Sharing",
+      "remote keyboard",
+      "Bonjour VNC discovery",
+      "iCloud sync"
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://glancevnc.app/#organization",
+      "name": "GlanceVNC",
+      "url": "https://glancevnc.app/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://glancevnc.app/#webpage"
+    },
+    "softwareHelp": "https://glancevnc.app/support.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://glancevnc.app/#faq",
+    "url": "https://glancevnc.app/",
+    "name": "GlanceVNC feature FAQ",
+    "description": "Answers about GlanceVNC features, VNC connections, nearby discovery, iCloud profile sync, Keychain password storage, and Mac Screen Sharing support.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://glancevnc.app/#website",
+      "name": "GlanceVNC",
+      "url": "https://glancevnc.app/"
+    },
+    "about": {
+      "@type": "MobileApplication",
+      "@id": "https://glancevnc.app/#app"
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is GlanceVNC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GlanceVNC is a VNC viewer for iPhone and iPad. It lets users save remote desktop connections, discover nearby VNC servers, reconnect quickly, control the remote pointer with touch gestures, and send keyboard shortcuts during a session."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does GlanceVNC connect through a cloud service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. GlanceVNC opens a direct VNC connection to the host and port configured by the user. The app does not operate a remote desktop relay service. Saved connection profile metadata can sync through the user's private iCloud database when iCloud is available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does GlanceVNC store VNC passwords?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GlanceVNC stores VNC passwords in the device Keychain. Saved connection names, hosts, ports, usernames, and sign-in mode are stored locally on the device and can sync through the user's private iCloud database when iCloud is available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What VNC sign-in methods does GlanceVNC support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GlanceVNC supports automatic sign-in selection, no-password VNC servers, standard VNC password authentication, Tight security, supported stream-preserving VeNCrypt subtypes, and legacy Apple Remote Desktop Mac login where the server offers it."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="GlanceVNC home">
+      <img class="brand-mark" src="assets/app-icon.svg" alt="" aria-hidden="true">
+      <span>GlanceVNC</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">VNC viewer for iPhone and iPad</p>
+        <h1>GlanceVNC</h1>
+        <p class="lede">Discover nearby remote desktops, save the ones you use, keep profiles in sync with iCloud, and control your computer from iPhone or iPad with touch and keyboard tools that feel natural.</p>
+        <div class="actions">
+          <a class="button primary" href="#download">Download</a>
+          <a class="button secondary" href="support.html">Setup Help</a>
+        </div>
+      </div>
+      <div class="app-preview" role="img" aria-label="GlanceVNC app preview showing saved remote desktops and a VNC session">
+        <div class="phone-shell">
+          <div class="phone-screen">
+            <img class="preview-logo" src="assets/app-icon.svg" alt="" aria-hidden="true">
+            <div class="screen-top">
+              <span>Glance VNC</span>
+              <span class="plus">+</span>
+            </div>
+            <div class="section-label">Saved remote desktops</div>
+            <div class="connection-card">
+              <span class="display-icon"></span>
+              <strong>Studio Mac</strong>
+              <small>192.168.1.42:5900</small>
+              <span class="connect-pill">Connect</span>
+            </div>
+            <div class="section-label">Nearby remote desktops</div>
+            <div class="connection-card nearby">
+              <span class="network-icon"></span>
+              <strong>Lab Workstation</strong>
+              <small>lab-workstation.local:5900</small>
+              <span class="connect-pill">Connect</span>
+            </div>
+            <div class="remote-frame">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block" aria-labelledby="features-title">
+      <div class="section-heading">
+        <p class="eyebrow">Features</p>
+        <h2 id="features-title">Remote access without the fuss</h2>
+        <p>GlanceVNC keeps the everyday workflow simple: find a computer, save it, reconnect when you need it, and keep the session tools close at hand.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">01</span>
+          <h3>Saved computers</h3>
+          <p>Add each remote computer once, give it a friendly name, and reconnect from a library sorted by recent use.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">02</span>
+          <h3>Nearby discovery</h3>
+          <p>Find VNC servers advertised on your local network with Bonjour, then use the discovered host and port to create a saved connection.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">03</span>
+          <h3>Private iCloud profile sync</h3>
+          <p>Saved desktop profiles can sync through your private iCloud database so your connection list follows you across devices.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">04</span>
+          <h3>Passwords stay protected</h3>
+          <p>Saved passwords are kept in the Apple Keychain on your device, separate from synced profile details.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">05</span>
+          <h3>Works with Mac Screen Sharing</h3>
+          <p>Connect to Macs that allow VNC viewers in Screen Sharing, with guidance when modern Apple-only sign-in is offered.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">06</span>
+          <h3>Natural touch controls</h3>
+          <p>Choose hybrid, touch, or trackpad-style input, then click, drag, right click, scroll, pinch zoom, and double tap your way around.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">07</span>
+          <h3>Helpful keyboard tools</h3>
+          <p>Open the keyboard when you need text, modifiers, arrows, function keys, clipboard actions, Spotlight, Mission Control, or app switching.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">08</span>
+          <h3>Broad VNC compatibility</h3>
+          <p>Supports RFB 3.3 through 3.8, Tight and VeNCrypt negotiation, common compressed encodings, cursor updates, clipboard text, and remote resize where servers allow it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="download" class="download-block" aria-labelledby="download-title">
+      <div>
+        <p class="eyebrow">Availability</p>
+        <h2 id="download-title">Download GlanceVNC</h2>
+        <p>The App Store link will be added here when GlanceVNC is available. Privacy details, setup help, and support answers are already published for review.</p>
+      </div>
+      <span class="button primary disabled" aria-label="App Store link coming soon">App Store link coming soon</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 GlanceVNC.</span>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="support.html">Support</a>
+  </footer>
+</body>
+</html>

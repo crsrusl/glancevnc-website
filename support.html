@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support - GlanceVNC</title>
+  <meta name="description" content="GlanceVNC support page with setup help, nearby discovery, iCloud profile sync, troubleshooting, VNC FAQ, technical compatibility notes, privacy answers, and contact information.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://glancevnc.app/support.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://glancevnc.app/support.html#faq",
+    "url": "https://glancevnc.app/support.html",
+    "name": "GlanceVNC Support FAQ",
+    "description": "Support answers for adding VNC connections, choosing VNC sign-in methods, connecting to Mac Screen Sharing, troubleshooting timeouts, technical compatibility, and contacting GlanceVNC support.",
+    "inLanguage": "en",
+    "dateModified": "2026-05-12",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://glancevnc.app/#website",
+      "name": "GlanceVNC",
+      "url": "https://glancevnc.app/"
+    },
+    "about": {
+      "@type": "MobileApplication",
+      "@id": "https://glancevnc.app/#app",
+      "name": "GlanceVNC"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://glancevnc.app/#organization",
+      "name": "GlanceVNC"
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I add a VNC connection in GlanceVNC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Open GlanceVNC, tap Add, enter a name, host or IP address, port, optional username, password, and sign-in method, then save the connection. You can also start from a nearby VNC desktop discovered on your local network."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What port does VNC usually use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most VNC servers use port 5900. GlanceVNC lets you change the port for servers that use a different VNC port."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why can't GlanceVNC connect to my server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check that the VNC server is running, the host and port are correct, the device is on the right network or VPN, Local Network permission is allowed when using nearby discovery, firewall rules allow VNC traffic, and the selected authentication method matches the server."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I connect to a Mac with Screen Sharing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On the Mac, enable Screen Sharing and allow VNC viewers to control the screen with a password. In GlanceVNC, enter the Mac host name or IP address and choose VNC password if needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I contact GlanceVNC support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email support@glancevnc.app with your device model, iOS or iPadOS version, VNC server type, host format, port, sign-in method, and any connection error shown in the app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What technical VNC features does GlanceVNC support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GlanceVNC negotiates RFB 3.3 through 3.8, supports no-password, standard VNC password, Tight security, supported stream-preserving VeNCrypt subtypes, and legacy Apple Remote Desktop authentication. It decodes Raw, CopyRect, RRE, CoRRE, Hextile, Zlib, ZlibHex, ZRLE, Tight, Tight PNG, JPEG, Open H.264, cursor, desktop size, and related framebuffer updates."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="GlanceVNC home">
+      <img class="brand-mark" src="assets/app-icon.svg" alt="" aria-hidden="true">
+      <span>GlanceVNC</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html" aria-current="page">Support</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <p class="eyebrow">Support URL</p>
+      <h1>GlanceVNC Support</h1>
+      <p class="lede">Find setup answers, nearby discovery notes, sync behavior, connection troubleshooting steps, and contact information for GlanceVNC.</p>
+      <a class="button primary" href="mailto:support@glancevnc.app">Email Support</a>
+    </section>
+
+    <section class="faq-list" aria-label="Support FAQ">
+      <article>
+        <h2>How do I add a VNC connection?</h2>
+        <p>Open GlanceVNC, tap Add, enter the host or IP address, confirm the port, choose the sign-in method, and save. Port 5900 is the common default for VNC. You can enter addresses with or without a <code>vnc://</code> prefix.</p>
+      </article>
+      <article>
+        <h2>How does nearby discovery work?</h2>
+        <p>GlanceVNC looks for VNC servers advertised on your local network with Bonjour as <code>_rfb._tcp.</code> services. If a discovered desktop resolves to a host and port, you can use it to create a saved connection.</p>
+      </article>
+      <article>
+        <h2>Do saved connections sync between devices?</h2>
+        <p>Saved desktop profiles can sync through your private iCloud database when iCloud is available. Passwords are not included in the synced profile and remain in Keychain on each device.</p>
+      </article>
+      <article>
+        <h2>What sign-in method should I choose?</h2>
+        <p>Use Automatic for most servers. Use VNC password when your server requires the standard VNC password. Use Mac login only when the Mac offers the legacy Apple Remote Desktop login method.</p>
+      </article>
+      <article>
+        <h2>How do I connect to a Mac?</h2>
+        <p>On the Mac, open Screen Sharing settings and enable the option that allows VNC viewers to control the screen with a password. Then add the Mac host name or IP address in GlanceVNC.</p>
+      </article>
+      <article>
+        <h2>Why does my connection time out?</h2>
+        <p>A timeout usually means the device cannot reach the VNC server. Check Wi-Fi, VPN, routing, firewall rules, the VNC server status, and whether the host and port are correct.</p>
+      </article>
+      <article>
+        <h2>Why does authentication fail?</h2>
+        <p>Authentication can fail when the saved password is wrong, the server requires a different sign-in mode, or a Mac is offering a Screen Sharing login type that is not the same as standard VNC password sign-in.</p>
+      </article>
+      <article>
+        <h2>How do I send keyboard input?</h2>
+        <p>Open the keyboard control during a VNC session. GlanceVNC sends typed text plus Enter, Backspace, Tab, Escape, arrows, F1-F12, modifiers, clipboard actions, and common Mac shortcuts from the session toolbar.</p>
+      </article>
+      <article>
+        <h2>What touch gestures are available?</h2>
+        <p>Use hybrid, touch, or trackpad-style input. GlanceVNC supports pointer movement, tap for left click, long press drag, two-finger right click, configurable scroll sensitivity, natural scrolling, pinch zoom, and double-tap zoom or double click.</p>
+      </article>
+      <article>
+        <h2>What VNC versions are supported?</h2>
+        <p>GlanceVNC negotiates RFB 3.3, 3.7, and 3.8 connections with compatible VNC servers.</p>
+      </article>
+      <article>
+        <h2>What VNC authentication methods are supported?</h2>
+        <p>GlanceVNC supports no-password servers, standard VNC password authentication, Tight security with supported authentication types, supported stream-preserving VeNCrypt subtypes, automatic sign-in selection, and legacy Apple Remote Desktop authentication when the server offers it.</p>
+      </article>
+      <article>
+        <h2>What framebuffer encodings are supported?</h2>
+        <p>GlanceVNC supports Raw, CopyRect, RRE, CoRRE, Hextile, Zlib, ZlibHex, ZRLE, Tight, Tight PNG, JPEG, Open H.264, cursor, desktop size, desktop name, and extended desktop size framebuffer updates.</p>
+      </article>
+      <article>
+        <h2>Can GlanceVNC resize the remote desktop?</h2>
+        <p>When a server advertises ExtendedDesktopSize support, the session toolbar offers common remote desktop sizes. Servers can still accept or deny resize requests.</p>
+      </article>
+      <article>
+        <h2>Does clipboard text work?</h2>
+        <p>GlanceVNC can send clipboard text with ClientCutText and supports basic and Extended Clipboard text from compatible servers. Rich clipboard formats are not supported.</p>
+      </article>
+      <article>
+        <h2>What diagnostics are available?</h2>
+        <p>During connection, GlanceVNC shows progress for connection, protocol, authentication, display setup, and framebuffer updates. Failed sessions can copy connection details, and active sessions can show or copy performance diagnostics.</p>
+      </article>
+      <article>
+        <h2>How do I report a support issue?</h2>
+        <p>Email <a href="mailto:support@glancevnc.app">support@glancevnc.app</a>. Include your device model, iOS or iPadOS version, VNC server type, host format, port, sign-in method, and any error text shown in GlanceVNC.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 GlanceVNC.</span>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</body>
+</html>
