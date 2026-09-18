@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GlanceVNC - Fast VNC viewer for iPhone and iPad</title>
-  <meta name="description" content="GlanceVNC is a VNC viewer for iPhone and iPad with saved desktops, nearby VNC discovery, private iCloud profile sync, Keychain passwords, touch controls, keyboard tools, and broad RFB compatibility.">
+  <title>GlanceVNC - VNC viewer for iPhone and iPad</title>
+  <meta name="description" content="GlanceVNC is a VNC viewer for iOS and iPadOS 27 or later, with saved desktops, nearby discovery, iCloud sync, Touch and Trackpad modes, colour-depth settings, and custom backgrounds.">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="GlanceVNC">
-  <meta property="og:description" content="A focused VNC viewer with saved desktops, nearby discovery, private iCloud profile sync, touch controls, secure credentials, and Mac Screen Sharing support.">
+  <meta property="og:description" content="A focused VNC viewer with saved desktops, nearby discovery, private iCloud profile sync, Touch and Trackpad controls, and Mac Screen Sharing support.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://glancevnc.com/">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -37,8 +37,9 @@
     "url": "https://glancevnc.com/",
     "applicationCategory": "UtilitiesApplication",
     "applicationSubCategory": "VNC viewer",
-    "operatingSystem": ["iOS", "iPadOS"],
-    "description": "GlanceVNC is a VNC viewer for iPhone and iPad that saves remote desktop connections, discovers nearby VNC servers, syncs saved profiles through the user's private iCloud database when available, stores passwords in Keychain, supports touch and keyboard controls, and connects directly to user-configured VNC servers.",
+    "operatingSystem": ["iOS 27.0 or later", "iPadOS 27.0 or later"],
+    "dateModified": "2026-09-18",
+    "description": "GlanceVNC is a VNC viewer for iPhone and iPad running iOS or iPadOS 27 or later. It saves remote desktop connections, discovers nearby VNC servers, syncs profiles through private iCloud, stores passwords in synchronizable Keychain, and offers Touch and Trackpad controls, keyboard input, colour-depth settings, and custom backgrounds.",
     "publisher": {
       "@type": "Organization",
       "@id": "https://glancevnc.com/#organization",
@@ -68,14 +69,14 @@
       <div class="max-w-3xl">
         <p class="glass-chip mb-5 inline-flex">VNC viewer for iPhone and iPad</p>
         <h1 class="max-w-[760px] text-[clamp(3.35rem,10vw,7.6rem)] font-black leading-[0.84] tracking-[-0.055em] text-[#111318]">GlanceVNC</h1>
-        <p class="mt-7 max-w-2xl text-balance text-xl leading-8 text-black/68 md:text-2xl md:leading-9">Discover nearby remote desktops, save the ones you use, sync profiles privately with iCloud, and control your computer with touch and keyboard tools that feel native on iPhone and iPad.</p>
+        <p class="mt-7 max-w-2xl text-balance text-xl leading-8 text-black/68 md:text-2xl md:leading-9">Discover nearby remote desktops, save the ones you use, sync profiles privately with iCloud, and control your computer with Touch or Trackpad mode and the on-screen keyboard.</p>
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a class="liquid-button liquid-button-primary" href="#download">Download</a>
+          <a class="liquid-button liquid-button-primary" href="#download">Availability</a>
           <a class="liquid-button" href="support.html">Setup Help</a>
         </div>
       </div>
 
-      <div class="relative mx-auto w-full max-w-[390px]" role="img" aria-label="GlanceVNC app preview showing saved remote desktops and a VNC session">
+      <div class="relative mx-auto w-full max-w-[390px]" role="img" aria-label="Illustration of saved remote desktops and a remote session">
         <div class="phone-aura"></div>
         <div class="phone-shell">
           <div class="phone-screen">
@@ -124,18 +125,18 @@
       <div class="max-w-3xl">
         <p class="glass-chip mb-4 inline-flex">Feature Set</p>
         <h2 id="features-title" class="text-balance text-4xl font-black tracking-[-0.045em] text-[#111318] md:text-6xl">Remote access that stays out of the way.</h2>
-        <p class="mt-5 text-lg leading-8 text-black/62">The content layer stays calm and readable. Controls float above it, matching Apple’s Liquid Glass hierarchy without turning every surface into glass.</p>
+        <p class="mt-5 text-lg leading-8 text-black/62">Keep your saved computers together, choose how you control the pointer, and adjust the display to suit your connection.</p>
       </div>
 
       <div class="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <article class="material-card"><span>01</span><h3>Saved computers</h3><p>Add each remote computer once, give it a friendly name, and reconnect from a recent library.</p></article>
+        <article class="material-card"><span>01</span><h3>Saved computers</h3><p>Save each remote computer with a friendly name and reconnect from your library, with locally cached desktop previews.</p></article>
         <article class="material-card"><span>02</span><h3>Nearby discovery</h3><p>Find Bonjour VNC servers on your local network and turn discovered hosts into saved connections.</p></article>
         <article class="material-card"><span>03</span><h3>Private iCloud sync</h3><p>Connection profile metadata can follow you across devices through your private iCloud database.</p></article>
-        <article class="material-card"><span>04</span><h3>Keychain passwords</h3><p>Saved VNC passwords stay in the Apple Keychain on each device, separate from synced profiles.</p></article>
-        <article class="material-card"><span>05</span><h3>Mac Screen Sharing</h3><p>Connect to Macs that allow VNC viewers, with practical guidance for Apple sign-in differences.</p></article>
-        <article class="material-card"><span>06</span><h3>Touch control modes</h3><p>Use hybrid, touch, or trackpad-style input for pointer movement, clicks, drags, scroll, and zoom.</p></article>
-        <article class="material-card"><span>07</span><h3>Keyboard tools</h3><p>Send text, modifiers, arrows, function keys, clipboard actions, and common Mac shortcuts.</p></article>
-        <article class="material-card"><span>08</span><h3>Broad RFB support</h3><p>Supports RFB 3.3 through 3.8, Tight, VeNCrypt negotiation, compressed encodings, cursor updates, and resize.</p></article>
+        <article class="material-card"><span>04</span><h3>Keychain passwords</h3><p>Passwords are stored in Apple Keychain and can sync through iCloud Keychain when enabled, separately from profile sync.</p></article>
+        <article class="material-card"><span>05</span><h3>Mac Screen Sharing</h3><p>Connect with a configured VNC password, or use Mac login when the server offers compatible legacy Apple Remote Desktop authentication.</p></article>
+        <article class="material-card"><span>06</span><h3>Touch control modes</h3><p>Choose Touch for direct positioning or Trackpad for relative pointer movement. Tap, double-click, drag, scroll, and pinch to zoom.</p></article>
+        <article class="material-card"><span>07</span><h3>Keyboard input</h3><p>Open the on-screen keyboard during a session to type text and send Enter and Backspace.</p></article>
+        <article class="material-card"><span>08</span><h3>Display preferences</h3><p>Choose 16-bit or 24-bit colour for your next connection, and personalise the home dashboard with a photo background.</p></article>
       </div>
     </section>
 
@@ -144,7 +145,7 @@
         <div>
           <p class="glass-chip mb-4 inline-flex">Availability</p>
           <h2 id="download-title" class="text-3xl font-black tracking-[-0.04em] text-white md:text-5xl">Download GlanceVNC</h2>
-          <p class="download-copy mt-4 max-w-2xl text-base leading-7">The App Store link will be added here when GlanceVNC is available. Privacy details, setup help, and support answers are already published for review.</p>
+          <p class="download-copy mt-4 max-w-2xl text-base leading-7">Requires iOS 27 or iPadOS 27 or later. The App Store link will be added here when GlanceVNC is available. See Setup Help for compatible servers and connection instructions.</p>
         </div>
         <span class="liquid-button liquid-button-primary pointer-events-none opacity-80">App Store link coming soon</span>
       </div>
