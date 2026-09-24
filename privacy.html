@@ -13,10 +13,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy - GlanceVNC</title>
-  <meta name="description" content="GlanceVNC privacy policy: what data is stored locally, what saved profile metadata can sync with private iCloud, how VNC credentials are protected, and how direct VNC connections work.">
+  <meta name="description" content="GlanceVNC privacy policy: what data is stored locally, what saved profile metadata can sync with private iCloud, how remote desktop credentials are protected, and how direct VNC and RDP connections work.">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="Privacy Policy - GlanceVNC">
-  <meta property="og:description" content="GlanceVNC privacy policy: what data is stored locally, what saved profile metadata can sync with private iCloud, how VNC credentials are protected, and how direct VNC connections work.">
+  <meta property="og:description" content="GlanceVNC privacy policy: what data is stored locally, what saved profile metadata can sync with private iCloud, how remote desktop credentials are protected, and how direct VNC and RDP connections work.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://glancevnc.com/privacy.html">
   <meta property="og:site_name" content="GlanceVNC">
@@ -27,7 +27,7 @@
   <meta property="og:image:alt" content="GlanceVNC — Remote desktops at a glance. VNC viewer for iPhone and iPad.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Privacy Policy - GlanceVNC">
-  <meta name="twitter:description" content="GlanceVNC privacy policy: what data is stored locally, what saved profile metadata can sync with private iCloud, how VNC credentials are protected, and how direct VNC connections work.">
+  <meta name="twitter:description" content="GlanceVNC privacy policy: what data is stored locally, what saved profile metadata can sync with private iCloud, how remote desktop credentials are protected, and how direct VNC and RDP connections work.">
   <meta name="twitter:image" content="https://glancevnc.com/assets/social-preview.png">
   <meta name="twitter:image:alt" content="GlanceVNC app icon and remote desktop app description">
   <link rel="canonical" href="https://glancevnc.com/privacy.html">
@@ -42,7 +42,7 @@
     "@type": "WebPage",
     "@id": "https://glancevnc.com/privacy.html#webpage",
     "name": "GlanceVNC Privacy Policy",
-    "description": "Privacy policy for GlanceVNC, including local connection profile storage, private iCloud profile sync, Keychain password storage, direct VNC connections, nearby discovery, and data deletion.",
+    "description": "Privacy policy for GlanceVNC, including local connection profile storage, private iCloud profile sync, Keychain password storage, direct VNC and RDP connections, nearby discovery, and data deletion.",
     "url": "https://glancevnc.com/privacy.html",
     "inLanguage": "en",
     "dateModified": "2026-09-24"
@@ -67,21 +67,21 @@
     <section class="py-14 md:py-20">
       <p class="glass-chip mb-5 inline-flex">Last updated: September 24, 2026</p>
       <h1 class="text-balance text-[clamp(3.2rem,9vw,6.4rem)] font-black leading-[0.9] tracking-[-0.055em]">Privacy Policy</h1>
-      <p class="mt-6 max-w-3xl text-xl leading-8 text-black/65">GlanceVNC is designed for direct VNC connections. The app does not require a GlanceVNC account, does not run a remote desktop relay, and does not collect analytics in the app.</p>
+      <p class="mt-6 max-w-3xl text-xl leading-8 text-black/65">GlanceVNC is designed for direct VNC and RDP connections. The app does not require a GlanceVNC account, does not run a remote desktop relay, and does not collect analytics in the app.</p>
     </section>
 
     <section class="grid gap-4 pb-16" aria-label="Privacy policy details">
-      <article class="support-card"><h2>What data does GlanceVNC collect?</h2><p>The GlanceVNC app does not collect personal data for the developer. The app stores the information you enter for saved VNC connections locally on your device and can sync saved profile metadata through your private iCloud database when iCloud is available.</p></article>
-      <article class="support-card"><h2>What data is stored on the device?</h2><p>Saved connection profiles may include a connection name, host or IP address, port, optional username, chosen sign-in method, creation date, and last connected date. These profiles are stored locally in the app's Application Support storage.</p></article>
+      <article class="support-card"><h2>What data does GlanceVNC collect?</h2><p>The GlanceVNC app does not collect personal data for the developer. The app stores the information you enter for saved VNC and RDP connections locally on your device and can sync saved profile metadata through your private iCloud database when iCloud is available.</p></article>
+      <article class="support-card"><h2>What data is stored on the device?</h2><p>Saved connection profiles may include a connection name, host or IP address, port, optional username, chosen protocol, sign-in method, remote computer profile, VNC sharing preference, approved RDP certificate fingerprint, creation date, and last connected date. These profiles are stored locally in the app's Application Support storage.</p></article>
       <article class="support-card"><h2>Are images stored on the device?</h2><p>GlanceVNC caches thumbnail previews of remote desktops on your device for saved connections. If you choose a custom dashboard background, the app stores a resized copy on your device. These images are not included in CloudKit profile sync or sent to the developer. Deleting a saved connection removes its cached thumbnail. Choosing Use Default Background in Settings removes the saved custom background.</p></article>
-      <article class="support-card"><h2>What data syncs with iCloud?</h2><p>Saved profile metadata may sync through Apple's CloudKit service in your private iCloud database. This can include the connection name, host, port, optional username, sign-in method, creation date, updated date, and last connected date. VNC passwords are not included in synced profiles.</p></article>
-      <article class="support-card"><h2>How are passwords secured?</h2><p>VNC passwords are stored in Apple Keychain and are eligible to sync between your devices through iCloud Keychain when it is enabled. Passwords are not stored inside connection profile files or CloudKit profile records, and are not sent to the developer.</p></article>
+      <article class="support-card"><h2>What data syncs with iCloud?</h2><p>Saved profile metadata may sync through Apple's CloudKit service in your private iCloud database. This can include the connection name, host, port, optional username, protocol, sign-in method, remote computer profile, VNC sharing preference, approved RDP certificate fingerprint, creation date, updated date, and last connected date. VNC and RDP passwords are not included in synced profiles.</p></article>
+      <article class="support-card"><h2>How are passwords secured?</h2><p>VNC and RDP passwords are stored in Apple Keychain and are eligible to sync between your devices through iCloud Keychain when it is enabled. Passwords are not stored inside connection profile files or CloudKit profile records, and are not sent to the developer.</p></article>
       <article class="support-card"><h2>How does nearby discovery use the network?</h2><p>GlanceVNC can browse the local network for Bonjour VNC services advertised as <code>_rfb._tcp.</code>. Discovery results are used in the app to help create a connection and are not sent to the developer.</p></article>
-      <article class="support-card"><h2>How are VNC connections used?</h2><p>When you connect, GlanceVNC opens a direct TCP connection to the host and port you configured. Authentication details are sent directly to that VNC server as part of the VNC sign-in process.</p></article>
-      <article class="support-card"><h2>Does GlanceVNC send remote desktop content to the developer?</h2><p>No. Remote desktop frames are displayed in the app during your VNC session. GlanceVNC does not send your remote screen content, host list, usernames, or passwords to the developer.</p></article>
+      <article class="support-card"><h2>How are VNC and RDP connections used?</h2><p>When you connect, GlanceVNC opens a direct TCP connection to the host and port you configured. Authentication details are sent directly to that server as part of the selected protocol’s sign-in process. RDP certificates are checked automatically; when you approve a certificate in the app, its fingerprint is saved with the connection profile.</p></article>
+      <article class="support-card"><h2>Does GlanceVNC send remote desktop content to the developer?</h2><p>No. Remote desktop frames are displayed in the app during your remote session. GlanceVNC does not send your remote screen content, host list, usernames, or passwords to the developer.</p></article>
       <article class="support-card"><h2>Does the GlanceVNC app use tracking, analytics, or advertising?</h2><p>No. The GlanceVNC app does not include third-party advertising, tracking SDKs, or in-app analytics collection.</p></article>
       <article class="support-card"><h2>How can I delete my data?</h2><p>You can delete saved connections in the app. Deleting a saved connection removes its local profile, deletes the associated password from Keychain, and syncs the deletion marker through iCloud when profile sync is available.</p></article>
-      <article class="support-card"><h2>Does this website use analytics?</h2><p>This website uses Google Analytics to help us understand visits and how people use its pages. Google Analytics uses cookies and collects information about website activity, such as page views, referring sites, and browser and device information. This website analytics is separate from the GlanceVNC app and does not collect your VNC credentials or remote desktop content. Learn more about <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites that use its services</a>.</p></article>
+      <article class="support-card"><h2>Does this website use analytics?</h2><p>This website uses Google Analytics to help us understand visits and how people use its pages. Google Analytics uses cookies and collects information about website activity, such as page views, referring sites, and browser and device information. This website analytics is separate from the GlanceVNC app and does not collect your remote desktop credentials or remote desktop content. Learn more about <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites that use its services</a>.</p></article>
       <article class="support-card"><h2>Contact</h2><p>For privacy questions, contact <a href="mailto:support@glancevnc.com">support@glancevnc.com</a>.</p></article>
     </section>
   </main>

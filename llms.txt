@@ -1,20 +1,25 @@
 # GlanceVNC
 
-> GlanceVNC is a paid VNC remote-desktop app by Chris Russell for iPhone and iPad. It lets users view and control computers they own or are authorised to access.
+> GlanceVNC is a paid VNC and RDP remote-desktop app by Chris Russell for iPhone and iPad. It lets users view and control computers they own or are authorised to access.
 
 ## Product facts
 
 - Requires iOS 27 or later on iPhone, or iPadOS 27 or later on iPad.
-- Requires a reachable computer running a compatible VNC server or Mac Screen Sharing. GlanceVNC is a client, not a VNC server or hosted remote-access relay.
+- Requires a reachable computer running a compatible VNC or RDP server, or Mac Screen Sharing. GlanceVNC is a client, not a VNC server or hosted remote-access relay.
 - Access outside the local network requires the user's own network setup, such as a VPN.
 - All features are included in the app purchase. No subscriptions, in-app purchases or GlanceVNC account are required. Regional prices are shown in the App Store.
+- RDP supports compatible Windows and Linux desktops, direct TLS/NLA connections and username/password sign-in (port 3389 by default). Add RDP hosts manually; nearby discovery finds VNC services. RDP gateways, Kerberos/Azure sign-in, clipboard, audio and file/device redirection are not supported.
+- Review RDP certificates in the app when approval is needed. Approval is remembered; changed certificates require a new review. Edit the connection to forget a trusted certificate.
+- Version 1.1 improves VNC colour-format compatibility and RDP graphics setup, and explains when no RDP desktop image arrives within 15 seconds.
+- Hide the keyboard with its dismissal button or by tapping the desktop in Touch or Trackpad mode; the desktop tap still sends the usual remote click.
+- Settings → What’s New lists recent improvements alongside third-party licences and the privacy policy.
 - Features include saved connections, nearby Bonjour discovery, Touch and Trackpad controls, keyboard input, gesture help, colour-depth preferences and custom backgrounds.
 - Switch Touch/Trackpad mode during a session through session Settings. Home-screen Settings controls the default for future connections.
 - Compatible legacy Apple Remote Desktop authentication and standard VNC password authentication are supported. Newer Apple Screen Sharing authentication, Tight Security and VeNCrypt are not supported; see the support page for details.
 
 ## Privacy and storage
 
-Saved connection metadata can sync through the user's private iCloud database. Passwords are stored separately in Apple Keychain and can sync through iCloud Keychain when enabled. Desktop thumbnails and custom backgrounds stay on the device. The app does not send remote desktop content to the developer or include advertising, tracking SDKs or in-app analytics collection. The website separately uses Google Analytics to measure visits and page usage. See the privacy policy for full details.
+Saved connection metadata can sync through the user's private iCloud database, including protocol, approved RDP certificate fingerprint, remote computer profile and VNC sharing preference. Passwords are stored separately in Apple Keychain and can sync through iCloud Keychain when enabled. Desktop thumbnails and custom backgrounds stay on the device. The app does not send remote desktop content to the developer or include advertising, tracking SDKs or in-app analytics collection. The website separately uses Google Analytics to measure visits and page usage. See the privacy policy for full details.
 
 ## Official sources
 
