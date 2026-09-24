@@ -14,7 +14,7 @@
 
 ## Privacy and storage
 
-Saved connection metadata can sync through the user's private iCloud database. Passwords are stored separately in Apple Keychain and can sync through iCloud Keychain when enabled. Desktop thumbnails and custom backgrounds stay on the device. The app does not send remote desktop content to the developer or include advertising, tracking SDKs or in-app analytics collection. See the privacy policy for full details.
+Saved connection metadata can sync through the user's private iCloud database. Passwords are stored separately in Apple Keychain and can sync through iCloud Keychain when enabled. Desktop thumbnails and custom backgrounds stay on the device. The app does not send remote desktop content to the developer or include advertising, tracking SDKs or in-app analytics collection. The website separately uses Google Analytics to measure visits and page usage. See the privacy policy for full details.
 
 ## Official sources
 
