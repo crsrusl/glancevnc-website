@@ -26,6 +26,6 @@ Saved connection metadata can sync through the user's private iCloud database. P
 
 ## Contact
 
-Support: support@glancevnc.app
+Support: support@glancevnc.com
 
 This file summarises the linked public pages. Last updated: 2026-09-24.
