@@ -1,0 +1,31 @@
+# GlanceVNC
+
+> GlanceVNC is a paid VNC remote-desktop app by Chris Russell for iPhone and iPad. It lets users view and control computers they own or are authorised to access.
+
+## Product facts
+
+- Requires iOS 27 or later on iPhone, or iPadOS 27 or later on iPad.
+- Requires a reachable computer running a compatible VNC server or Mac Screen Sharing. GlanceVNC is a client, not a VNC server or hosted remote-access relay.
+- Access outside the local network requires the user's own network setup, such as a VPN.
+- All features are included in the app purchase. No subscriptions, in-app purchases or GlanceVNC account are required. Regional prices are shown in the App Store.
+- Features include saved connections, nearby Bonjour discovery, Touch and Trackpad controls, keyboard input, gesture help, colour-depth preferences and custom backgrounds.
+- Switch Touch/Trackpad mode during a session through session Settings. Home-screen Settings controls the default for future connections.
+- Compatible legacy Apple Remote Desktop authentication and standard VNC password authentication are supported. Newer Apple Screen Sharing authentication, Tight Security and VeNCrypt are not supported; see the support page for details.
+
+## Privacy and storage
+
+Saved connection metadata can sync through the user's private iCloud database. Passwords are stored separately in Apple Keychain and can sync through iCloud Keychain when enabled. Desktop thumbnails and custom backgrounds stay on the device. The app does not send remote desktop content to the developer or include advertising, tracking SDKs or in-app analytics collection. See the privacy policy for full details.
+
+## Official sources
+
+- [Homepage](https://glancevnc.com/): Product overview, features, requirements and download link.
+- [App Store](https://apps.apple.com/gb/app/glancevnc/id6768106616): Official listing, current price, version and availability.
+- [Support](https://glancevnc.com/support.html): Setup, authentication, gestures, compatibility and troubleshooting.
+- [Privacy policy](https://glancevnc.com/privacy.html): Data storage, synchronisation and deletion.
+- [Sitemap](https://glancevnc.com/sitemap.xml): Public website pages.
+
+## Contact
+
+Support: support@glancevnc.app
+
+This file summarises the linked public pages. Last updated: 2026-09-24.

@@ -6,6 +6,21 @@
   <title>Support - GlanceVNC</title>
   <meta name="description" content="GlanceVNC support page with setup help, nearby discovery, iCloud profile sync, troubleshooting, VNC FAQ, technical compatibility notes, privacy answers, and contact information.">
   <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Support - GlanceVNC">
+  <meta property="og:description" content="GlanceVNC support page with setup help, nearby discovery, iCloud profile sync, troubleshooting, VNC FAQ, technical compatibility notes, privacy answers, and contact information.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://glancevnc.com/support.html">
+  <meta property="og:site_name" content="GlanceVNC">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://glancevnc.com/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="GlanceVNC — Remote desktops at a glance. VNC viewer for iPhone and iPad.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Support - GlanceVNC">
+  <meta name="twitter:description" content="GlanceVNC support page with setup help, nearby discovery, iCloud profile sync, troubleshooting, VNC FAQ, technical compatibility notes, privacy answers, and contact information.">
+  <meta name="twitter:image" content="https://glancevnc.com/assets/social-preview.png">
+  <meta name="twitter:image:alt" content="GlanceVNC app icon and remote desktop app description">
   <link rel="canonical" href="https://glancevnc.com/support.html">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -21,7 +36,7 @@
   "name": "GlanceVNC Support FAQ",
   "description": "Support answers for adding VNC connections, choosing VNC sign-in methods, connecting to Mac Screen Sharing, troubleshooting timeouts, technical compatibility, and contacting GlanceVNC support.",
   "inLanguage": "en",
-  "dateModified": "2026-09-18",
+  "dateModified": "2026-09-24",
   "mainEntity": [
     {
       "@type": "Question",
@@ -100,7 +115,7 @@
       "name": "How do I choose Touch or Trackpad mode?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Open Settings from the home screen and choose Cursor mode. Touch positions the pointer where you touch. Trackpad moves it relative to your finger movement and is the default. Changes apply to your next connection."
+        "text": "During a connection, tap the upward chevron to show the session controls, open Settings, and choose Touch or Trackpad under Control mode. The change takes effect in the current session. Touch positions the pointer where you touch; Trackpad moves it relative to your finger movement. To set the default for future connections, open home-screen Settings and choose Cursor mode."
       }
     },
     {
@@ -108,7 +123,7 @@
       "name": "What touch gestures are available?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "With the default gesture settings, tap for a left click, double-tap for a double-click, use a two-finger tap for a right click, hold and drag to move items, use two fingers to scroll, and pinch to zoom the local view. Pinch zoom changes your view of the desktop, not the computer’s screen resolution."
+        "text": "With the default gesture settings, tap for a left click, double-tap for a double-click, use a two-finger tap for a right click, hold and drag to move items, use two fingers to scroll, and pinch to zoom the local view. Pinch zoom changes your view of the desktop, not the computer’s screen resolution. For gesture instructions during a session, open the session Settings menu and select How to control your computer."
       }
     },
     {
@@ -235,8 +250,8 @@
       <article class="support-card"><h2>How do I connect to a Mac?</h2><p>Enable Screen Sharing on the Mac and the option allowing VNC viewers to control the screen with a password. In GlanceVNC, add the Mac host name or IP address, choose the macOS Remote Machine profile, select VNC password, and enter that VNC password. A Mac account password is not interchangeable with the separately configured VNC password.</p></article>
       <article class="support-card"><h2>Why does my connection time out?</h2><p>Check that your device can reach the computer over your local network or VPN, that the VNC server is running, and that its host, port, routing and firewall settings are correct. GlanceVNC connects directly to your server and does not provide a remote-access relay.</p></article>
       <article class="support-card"><h2>Why does authentication fail?</h2><p>Check the saved credentials and selected sign-in method. Some Macs offer newer Apple Screen Sharing authentication methods that GlanceVNC does not support; configure a VNC password and select VNC password in the saved connection. Servers requiring Tight Security or VeNCrypt authentication are not supported.</p></article>
-      <article class="support-card"><h2>How do I choose Touch or Trackpad mode?</h2><p>Open Settings from the home screen and choose Cursor mode. Touch positions the pointer where you touch. Trackpad moves it relative to your finger movement and is the default. Changes apply to your next connection.</p></article>
-      <article class="support-card"><h2>What touch gestures are available?</h2><p>With the default gesture settings, tap for a left click, double-tap for a double-click, use a two-finger tap for a right click, hold and drag to move items, use two fingers to scroll, and pinch to zoom the local view. Pinch zoom changes your view of the desktop, not the computer’s screen resolution.</p></article>
+      <article class="support-card"><h2>How do I choose Touch or Trackpad mode?</h2><p>During a connection, tap the upward chevron to show the session controls, open Settings, and choose Touch or Trackpad under Control mode. The change takes effect in the current session. Touch positions the pointer where you touch; Trackpad moves it relative to your finger movement. To set the default for future connections, open home-screen Settings and choose Cursor mode.</p></article>
+      <article class="support-card"><h2>What touch gestures are available?</h2><p>With the default gesture settings, tap for a left click, double-tap for a double-click, use a two-finger tap for a right click, hold and drag to move items, use two fingers to scroll, and pinch to zoom the local view. Pinch zoom changes your view of the desktop, not the computer’s screen resolution. For gesture instructions during a session, open the session Settings menu and select How to control your computer.</p></article>
       <article class="support-card"><h2>How do I send keyboard input?</h2><p>Tap the keyboard button during a session to show the on-screen keyboard. You can type text and send Enter and Backspace. The current app does not have a toolbar for function keys, modifier shortcuts or clipboard commands.</p></article>
       <article class="support-card"><h2>How do I choose colour depth?</h2><p>Open home-screen Settings and choose 16-bit or 24-bit under Colour depth. 16-bit is the default and uses less bandwidth; 24-bit provides richer colour. Both use compression and apply to your next connection.</p></article>
       <article class="support-card"><h2>Can I customise the home screen?</h2><p>In home-screen Settings, select Choose Background to pick a photo. GlanceVNC stores a resized copy locally. Select Use Default Background to remove it and restore the default appearance. Saved connections can also display locally cached desktop thumbnail previews.</p></article>
