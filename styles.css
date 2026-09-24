@@ -185,6 +185,24 @@ h3 {
   text-transform: uppercase;
 }
 
+.app-store-badge {
+  display: inline-block;
+  flex-shrink: 0;
+  justify-self: start;
+  border-radius: 10px;
+}
+
+.app-store-badge img {
+  display: block;
+  width: 180px;
+  height: auto;
+}
+
+.app-store-badge:focus-visible {
+  outline: 3px solid #2878ff;
+  outline-offset: 6px;
+}
+
 .liquid-button {
   position: relative;
   display: inline-flex;
