@@ -29,6 +29,11 @@ Saved connection metadata can sync through the user's private iCloud database, i
 - [Privacy policy](https://glancevnc.com/privacy.html): Data storage, synchronisation and deletion.
 - [Sitemap](https://glancevnc.com/sitemap.xml): Public website pages.
 
+## Setup guides
+
+- [Guides](https://glancevnc.com/guides/): Step-by-step remote desktop setup walkthroughs.
+- [Mac mini from iPad with VNC and Tailscale](https://glancevnc.com/guides/mac-mini-ipad-vnc-tailscale/): Configure Mac Screen Sharing with a VNC password, connect locally, then use the Mac’s Tailscale address. Tailscale is a separate network service requiring its own sign-in, not a built-in GlanceVNC integration.
+
 ## Contact
 
 Support: support@glancevnc.com

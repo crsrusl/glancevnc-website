@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS4RF91ZXC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DS4RF91ZXC');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mac mini from iPad: VNC & Tailscale Setup | GlanceVNC</title>
+  <meta name="description" content="Set up Mac Screen Sharing, connect from your iPad with GlanceVNC, and use Tailscale for remote access to your Mac mini.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Mac mini from iPad: VNC & Tailscale Setup | GlanceVNC">
+  <meta property="og:description" content="Set up Mac Screen Sharing, connect from your iPad with GlanceVNC, and use Tailscale for remote access to your Mac mini.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://glancevnc.com/guides/mac-mini-ipad-vnc-tailscale/">
+  <meta property="og:site_name" content="GlanceVNC">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://glancevnc.com/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="GlanceVNC app icon and remote desktop app description">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mac mini from iPad: VNC & Tailscale Setup | GlanceVNC">
+  <meta name="twitter:description" content="Set up Mac Screen Sharing, connect from your iPad with GlanceVNC, and use Tailscale for remote access to your Mac mini.">
+  <meta name="twitter:image" content="https://glancevnc.com/assets/social-preview.png">
+  <meta name="twitter:image:alt" content="GlanceVNC app icon and remote desktop app description">
+  <link rel="canonical" href="https://glancevnc.com/guides/mac-mini-ipad-vnc-tailscale/">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Helvetica', 'Helvetica Neue', 'Arial', 'sans-serif']
+          },
+          colors: {
+            glassPink: '#ff2b93',
+            glassViolet: '#a85ad7',
+            glassBlue: '#2878ff'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="/styles.css?v=20260925">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "Mac mini from iPad: VNC & Tailscale Setup | GlanceVNC",
+  "description": "Set up Mac Screen Sharing, connect from your iPad with GlanceVNC, and use Tailscale for remote access to your Mac mini.",
+  "url": "https://glancevnc.com/guides/mac-mini-ipad-vnc-tailscale/",
+  "inLanguage": "en-GB",
+  "headline": "Access your Mac mini from an iPad using VNC and Tailscale",
+  "datePublished": "2026-09-25",
+  "dateModified": "2026-09-25",
+  "author": {
+    "@type": "Person",
+    "name": "Chris Russell",
+    "url": "https://glancevnc.com/"
+  },
+  "mainEntityOfPage": "https://glancevnc.com/guides/mac-mini-ipad-vnc-tailscale/"
+}
+  </script>
+</head>
+<body class="min-h-screen overflow-x-hidden bg-[#f5f6fb] text-[#111318] antialiased">
+  <header class="site-container sticky top-3 z-50">
+    <div class="liquid-bar flex items-center justify-between gap-3 rounded-[28px] px-3 py-3 sm:px-4">
+      <a class="flex min-w-0 items-center gap-3 text-sm font-bold text-white no-underline" href="/" aria-label="GlanceVNC home">
+        <img class="h-11 w-11 rounded-[14px] shadow-glow" src="/assets/app-icon.svg" alt="" aria-hidden="true">
+        <span class="truncate">GlanceVNC</span>
+      </a>
+      <nav class="flex items-center gap-1 rounded-full bg-white/10 p-1 text-sm font-semibold text-white/80" aria-label="Main navigation">
+        <a class="nav-pill" href="/privacy.html">Privacy</a>
+        <a class="nav-pill" href="/support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+<main class="site-container guide-container">
+<article class="guide-article py-10 md:py-16">
+  <nav class="guide-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a></nav>
+  <header class="guide-heading">
+    <p class="glass-chip inline-flex">iPad remote desktop</p>
+    <h1>Access your Mac mini from an iPad using VNC and Tailscale</h1>
+    <p class="guide-intro">Keep your Mac mini at home and use its desktop from your iPad. Start with a local VNC connection in GlanceVNC, then use Tailscale to reach the same Mac when you’re away.</p>
+    <p class="guide-meta">By Chris Russell, GlanceVNC developer · Updated <time datetime="2026-09-25">25 September 2026</time></p>
+  </header>
+  <nav class="support-card guide-contents" aria-label="On this page">
+    <h2>In this guide</h2>
+    <ol><li><a href="#requirements">What you need</a></li><li><a href="#screen-sharing">Enable Mac Screen Sharing</a></li><li><a href="#local-connection">Connect your iPad locally</a></li><li><a href="#tailscale">Connect through Tailscale</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ol>
+  </nav>
+  <section id="requirements">
+    <h2>What you need</h2>
+    <ul><li>An iPad running iPadOS 27 or later, with GlanceVNC installed.</li><li>A Mac mini you own or are authorised to access, with a compatible Screen Sharing configuration.</li><li>Access to the Mac to configure sharing and keep it awake and connected.</li><li>For the remote steps, Tailscale installed and connected on both devices, with access between them permitted.</li></ul>
+    <p>GlanceVNC is the VNC viewer on your iPad. Mac Screen Sharing supplies the desktop. Tailscale provides the private network connection between them; it does not replace the VNC server or its password.</p>
+    <figure class="guide-flow"><div><strong>iPad</strong><span>GlanceVNC viewer</span></div><div><strong>Tailscale</strong><span>Private network connection</span></div><div><strong>Mac mini</strong><span>Screen Sharing server</span></div><figcaption>Remote setup: VNC traffic travels through the Tailscale connection. For a local connection, use your trusted local network instead.</figcaption></figure>
+    <p>No GlanceVNC account or subscription is required. Tailscale is a separate service with its own sign-in and plan terms.</p>
+  </section>
+  <section id="screen-sharing">
+    <h2>1. Enable Screen Sharing on the Mac mini</h2>
+    <ol><li>On the Mac, open <strong>System Settings → General → Sharing</strong>.</li><li>Turn on <strong>Screen Sharing</strong> and open its settings. If Remote Management is enabled, Apple requires it to be turned off before Screen Sharing can be enabled; check with your administrator on a managed Mac.</li><li>Enable <strong>VNC viewers may control screen with password</strong> and set a dedicated VNC password.</li><li>Note the Mac’s local network address for the first connection.</li></ol>
+    <p>Use the VNC password you just configured, rather than your Mac account password. The exact controls can vary with macOS version. See <a href="https://support.apple.com/guide/mac-help/turn-screen-sharing-on-or-off-mh11848/mac">Apple’s Screen Sharing instructions</a>.</p>
+    <p>Keep VNC access on a trusted network or inside your VPN. Standard VNC does not encrypt the desktop session; do not forward port 5900 from your router to the public internet for this setup.</p>
+  </section>
+  <section id="local-connection">
+    <h2>2. Connect from your iPad on the local network</h2>
+    <p>Connect the iPad to the same trusted network as the Mac. Open GlanceVNC, allow Local Network access if prompted, then tap <strong>Add</strong>. Enter these connection settings:</p>
+    <div class="guide-table-wrap"><table><caption>GlanceVNC connection settings</caption><thead><tr><th scope="col">Field</th><th scope="col">Value</th></tr></thead><tbody>
+    <tr><th scope="row">Protocol</th><td>VNC</td></tr><tr><th scope="row">Name</th><td>A name you recognise, such as Mac mini — Home</td></tr><tr><th scope="row">Host or IP address</th><td>Your Mac’s local IP address</td></tr><tr><th scope="row">Port</th><td>5900, unless your server uses a different port</td></tr><tr><th scope="row">Username</th><td>Leave blank for VNC password authentication</td></tr><tr><th scope="row">VNC password</th><td>The password configured in Screen Sharing</td></tr><tr><th scope="row">Sign In → Method</th><td>VNC password</td></tr><tr><th scope="row">Remote Machine → Profile</th><td>macOS</td></tr>
+    </tbody></table></div>
+    <p>Save the connection and connect. Confirm that the desktop appears and you can move the pointer and type. Resolving any local connection problem first makes remote setup easier to diagnose.</p>
+    <p>GlanceVNC offers Touch and Trackpad controls and an on-screen keyboard. See <a href="/support.html">Setup &amp; Support</a> for gestures and supported VNC authentication methods.</p>
+  </section>
+  <section id="tailscale">
+    <h2>3. Reach the Mac mini through Tailscale</h2>
+    <ol><li>Follow Tailscale’s installation instructions for <a href="https://tailscale.com/docs/install/mac">macOS</a> and <a href="https://tailscale.com/docs/install/ios">iPad</a>. On the iPad, approve the VPN configuration during setup.</li><li>Sign in on both devices to the same Tailscale network, called a tailnet, and connect both clients. If your network has custom access rules, they must allow the iPad to reach the Mac’s VNC port.</li><li>Find the Mac mini in Tailscale and copy its Tailscale IP address. Use the address belonging to the Mac, not the iPad. Tailscale’s IPv4 device addresses are in its <a href="https://tailscale.com/docs/reference/reserved-ip-addresses">100.64.0.0/10 range</a>.</li><li>In GlanceVNC, add another saved connection named Mac mini — Tailscale. Use the settings above, replacing the local host address with the Mac’s Tailscale IP address.</li><li>Connect while Tailscale is active on both devices. Keep the same VNC password and port.</li></ol>
+    <p>Use a manually saved connection for this step. Nearby discovery looks for local Bonjour services; it is not how you select your Mac’s Tailscale address.</p>
+    <h3>Check access before you leave home</h3>
+    <p>Put your iPad on a different network, such as a phone hotspot, while leaving your Mac online at home. Confirm Tailscale is connected, then open the Tailscale connection in GlanceVNC. Check the desktop, pointer and keyboard again.</p>
+    <p>Leave the Mac powered on and available. Do not assume a sleeping Mac or a Mac waiting for local interaction after a restart will be reachable. Check the behaviour of your own setup before relying on unattended access.</p>
+  </section>
+  <section id="troubleshooting">
+    <h2>If the connection does not work</h2>
+    <h3>The connection times out</h3>
+    <p>Check that the Mac is awake, Screen Sharing is on, and the saved address belongs to the Mac. For remote access, check both Tailscale clients are connected and their access rules and the Mac firewall permit the VNC connection. Use the Tailscale address rather than the home-network address.</p>
+    <h3>The password is rejected</h3>
+    <p>Select VNC password under Sign In and use the separately configured Screen Sharing password. GlanceVNC does not support newer Apple Screen Sharing authentication methods, Tight Security or VeNCrypt. Enabling a compatible VNC password configuration is essential.</p>
+    <h3>It works at home but not away</h3>
+    <p>Check that you selected the saved Tailscale connection. A working local connection confirms the Mac’s VNC setup, but does not establish that the remote network path is available.</p>
+    <h3>Can I use another VPN?</h3>
+    <p>Yes, if it provides a route from your iPad to the Mac’s VNC server. Use the address reachable through that VPN. This guide uses Tailscale as one network setup, rather than a built-in GlanceVNC integration.</p>
+    <p>For further help, see the <a href="/support.html">GlanceVNC support FAQ</a> and <a href="https://tailscale.com/docs">Tailscale documentation</a>.</p>
+  </section>
+  <aside class="guide-download" aria-labelledby="guide-download-title">
+    <h2 id="guide-download-title">Your Mac desktop, on your iPad.</h2>
+    <p><strong>GlanceVNC: no account. No subscription. Private by design.</strong></p>
+    <p>One app purchase, with all features included. Requires iPadOS 27 or later. Tailscale is set up separately.</p>
+    <a class="app-store-badge" href="https://apps.apple.com/gb/app/glancevnc/id6768106616"><img src="/assets/app-store-badge.svg" width="180" height="60" alt="Download on the App Store"></a>
+    <p><a href="/">Explore GlanceVNC</a></p>
+  </aside>
+</article>
+</main>
+  <footer class="site-container flex flex-col gap-3 py-10 text-sm text-black/52 sm:flex-row sm:items-center sm:justify-between">
+    <span>&copy; 2026 GlanceVNC.</span>
+    <span class="flex gap-5">
+      <a href="/guides/">Guides</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+    </span>
+  </footer>
+</body>
+</html>

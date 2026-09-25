@@ -575,3 +575,140 @@ h3 {
     }
   }
 }
+
+/* Reading layouts for the setup guides. */
+.guide-container {
+  max-width: 800px;
+}
+
+.guide-breadcrumb {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.guide-heading h1 {
+  margin: 1.25rem 0;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.guide-intro {
+  font-size: 1.25rem;
+  line-height: 1.65;
+}
+
+.guide-meta {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 1.25rem 0 2rem;
+}
+
+.guide-article section {
+  margin: 3rem 0;
+  scroll-margin-top: 7rem;
+}
+
+.guide-article h2 {
+  font-size: clamp(1.55rem, 4vw, 2rem);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+}
+
+.guide-article h3 {
+  font-size: 1.2rem;
+  font-weight: 750;
+  margin: 1.75rem 0 0.75rem;
+}
+
+.guide-article section p,
+.guide-article li,
+.guide-download p {
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.guide-article a:not(.app-store-badge) {
+  text-decoration-line: underline;
+}
+
+.guide-article ol,
+.guide-article ul {
+  padding-left: 1.4rem;
+}
+
+.guide-article ol { list-style: decimal; }
+.guide-article ul { list-style: disc; }
+.guide-contents li { margin-bottom: 0.35rem; }
+
+.guide-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.75rem 0;
+}
+
+.guide-flow div {
+  padding: 1rem;
+  border: 1px solid var(--glass-stroke);
+  border-radius: 1rem;
+  background: var(--glass-fill-strong);
+}
+
+.guide-flow span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.guide-flow figcaption {
+  grid-column: 1 / -1;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.guide-table-wrap {
+  margin: 1.5rem 0;
+}
+
+.guide-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.guide-table-wrap caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.guide-table-wrap th,
+.guide-table-wrap td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.8rem;
+  border-bottom: 1px solid rgba(17, 19, 24, 0.15);
+}
+
+.guide-table-wrap thead {
+  background: var(--glass-fill-strong);
+}
+
+.guide-download {
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border-radius: 1.7rem;
+  background: #111318;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .guide-flow { grid-template-columns: 1fr; }
+  .guide-table-wrap th,
+  .guide-table-wrap td { padding: 0.7rem 0.4rem; }
+}
