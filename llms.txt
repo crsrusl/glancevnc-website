@@ -5,8 +5,8 @@
 ## Product facts
 
 - Requires iOS 27 or later on iPhone, or iPadOS 27 or later on iPad.
-- Requires a reachable computer running a compatible VNC or RDP server, or Mac Screen Sharing. GlanceVNC is a client, not a VNC server or hosted remote-access relay.
-- Access outside the local network requires the user's own network setup, such as a VPN.
+- Connects to Mac, Windows PC, Linux and Raspberry Pi computers running a compatible VNC or RDP server, or Mac Screen Sharing, that the iPhone or iPad can reach. GlanceVNC is a client, not a VNC server or hosted remote-access relay.
+- Connect over the local network, or remotely through the user's own VPN that provides access to the computer.
 - All features are included in the app purchase. No subscriptions, in-app purchases or GlanceVNC account are required. Regional prices are shown in the App Store.
 - RDP supports compatible Windows and Linux desktops, direct TLS/NLA connections and username/password sign-in (port 3389 by default). Add RDP hosts manually; nearby discovery finds VNC services. RDP gateways, Kerberos/Azure sign-in, clipboard, audio and file/device redirection are not supported.
 - Review RDP certificates in the app when approval is needed. Approval is remembered; changed certificates require a new review. Edit the connection to forget a trusted certificate.
@@ -33,4 +33,4 @@ Saved connection metadata can sync through the user's private iCloud database, i
 
 Support: support@glancevnc.com
 
-This file summarises the linked public pages. Last updated: 2026-09-24.
+This file summarises the linked public pages. Last updated: 2026-09-25.
