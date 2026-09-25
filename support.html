@@ -52,7 +52,7 @@
       "name": "Which devices can run GlanceVNC?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "GlanceVNC requires iOS 27 or later on iPhone, or iPadOS 27 or later on iPad. Your remote computer must run a compatible VNC or RDP server that your device can reach."
+        "text": "GlanceVNC requires iOS 27 or later on iPhone, or iPadOS 27 or later on iPad. Connect to a Mac, Windows PC, Linux computer or Raspberry Pi running a compatible VNC or RDP server, or Mac Screen Sharing, that your device can reach."
       }
     },
     {
@@ -132,7 +132,7 @@
       "name": "Why does my connection time out?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Check that your device can reach the computer over your local network or VPN, that the selected VNC or RDP server is running, and that its host, port, routing and firewall settings are correct. GlanceVNC connects directly to your server and does not provide a remote-access relay."
+        "text": "Check that your device can reach the computer over your local network or through your own VPN, that the selected VNC or RDP server is running, and that its host, port, routing and firewall settings are correct. GlanceVNC connects directly to your server and does not provide a remote-access relay."
       }
     },
     {
@@ -274,7 +274,7 @@
     </section>
 
     <section class="grid gap-4 pb-16" aria-label="Support FAQ">
-      <article class="support-card"><h2>Which devices can run GlanceVNC?</h2><p>GlanceVNC requires iOS 27 or later on iPhone, or iPadOS 27 or later on iPad. Your remote computer must run a compatible VNC or RDP server that your device can reach.</p></article>
+      <article class="support-card"><h2>Which devices can run GlanceVNC?</h2><p>GlanceVNC requires iOS 27 or later on iPhone, or iPadOS 27 or later on iPad. Connect to a Mac, Windows PC, Linux computer or Raspberry Pi running a compatible VNC or RDP server, or Mac Screen Sharing, that your device can reach.</p></article>
       <article class="support-card"><h2>How do I add a VNC connection?</h2><p>Tap Add on the home screen, choose VNC under Protocol, enter the host or IP address, confirm the port, choose a sign-in method, and save. Port 5900 is the common VNC default. Addresses can include a <code>vnc://</code> prefix. Choose the Remote Machine profile that matches your computer, or Unknown for general compatibility defaults.</p></article>
       <article class="support-card"><h2>How do I add an RDP connection?</h2><p>Tap Add on the home screen, choose RDP under Protocol, enter the host or IP address and port (3389 by default), and save the remote account username and password. Choose the matching Remote Machine profile. Compatible Windows and Linux desktops must have an RDP server enabled and reachable from your device. Ordinary usernames, user@domain names and DOMAIN\username are supported.</p></article>
       <article class="support-card"><h2>How do RDP certificate approvals work?</h2><p>Certificates are checked when you connect. If approval is needed, review the server certificate in the app and trust it only after verifying it belongs to your computer. Approval is remembered for future connections; a changed certificate requires a new review. To reset approval, edit the saved RDP connection, choose Forget Trusted Certificate and save.</p></article>
@@ -284,7 +284,7 @@
       <article class="support-card"><h2>Do saved connections and passwords sync between devices?</h2><p>Saved profiles can sync through your private iCloud database when iCloud is available, including the connection protocol, approved RDP certificate fingerprint, remote computer profile and VNC sharing preference. Passwords are stored separately in Apple Keychain and can sync through iCloud Keychain when enabled. Desktop thumbnails and custom backgrounds are stored locally and are not part of CloudKit profile sync.</p></article>
       <article class="support-card"><h2>What sign-in method should I choose?</h2><p>For VNC, use Automatic for most servers. With a saved username and password, it can select compatible legacy Mac login when offered; otherwise it can use standard VNC password authentication. Choose VNC password for the password configured for VNC viewers. Choose Mac login only when the server offers legacy Apple Remote Desktop authentication, and supply both the Mac username and password.</p></article>
       <article class="support-card"><h2>How do I connect to a Mac?</h2><p>Enable Screen Sharing on the Mac and the option allowing VNC viewers to control the screen with a password. In GlanceVNC, add the Mac host name or IP address, choose the macOS Remote Machine profile, select VNC password, and enter that VNC password. A Mac account password is not interchangeable with the separately configured VNC password.</p></article>
-      <article class="support-card"><h2>Why does my connection time out?</h2><p>Check that your device can reach the computer over your local network or VPN, that the selected VNC or RDP server is running, and that its host, port, routing and firewall settings are correct. GlanceVNC connects directly to your server and does not provide a remote-access relay.</p></article>
+      <article class="support-card"><h2>Why does my connection time out?</h2><p>Check that your device can reach the computer over your local network or through your own VPN, that the selected VNC or RDP server is running, and that its host, port, routing and firewall settings are correct. GlanceVNC connects directly to your server and does not provide a remote-access relay.</p></article>
       <article class="support-card"><h2>Why does authentication fail?</h2><p>Check the selected protocol and saved credentials. For RDP, use the remote account username and password. For VNC, also check the selected sign-in method. Some Macs offer newer Apple Screen Sharing authentication methods that GlanceVNC does not support; configure a VNC password and select VNC password in the saved connection. Servers requiring Tight Security or VeNCrypt authentication are not supported.</p></article>
       <article class="support-card"><h2>How do I choose Touch or Trackpad mode?</h2><p>During a connection, tap the upward chevron to show the session controls, open Settings, and choose Touch or Trackpad under Control mode. The change takes effect in the current session. Touch positions the pointer where you touch; Trackpad moves it relative to your finger movement. To set the default for future connections, open home-screen Settings and choose Cursor mode.</p></article>
       <article class="support-card"><h2>What touch gestures are available?</h2><p>With the default gesture settings, tap for a left click, double-tap for a double-click, use a two-finger tap for a right click, hold and drag to move items, use two fingers to scroll, and pinch to zoom the local view. Pinch zoom changes your view of the desktop, not the computer’s screen resolution. For gesture instructions during a session, open the session Settings menu and select How to control your computer.</p></article>
