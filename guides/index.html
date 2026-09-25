@@ -49,6 +49,7 @@
     };
   </script>
   <link rel="stylesheet" href="/styles.css?v=20260925">
+  <link rel="stylesheet" href="/guides/guides.css?v=1">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -73,23 +74,54 @@
       </nav>
     </div>
   </header>
-<main class="site-container guide-container">
-<section class="py-14 md:py-20">
-  <p class="glass-chip mb-5 inline-flex">Practical walkthroughs</p>
-  <h1 class="text-5xl font-black tracking-[-0.045em] md:text-7xl">GlanceVNC Guides</h1>
-  <p class="mt-6 text-xl leading-8 text-black/70">Set up remote access to your own computers, from the first local connection to reaching your desktop while you’re away.</p>
-</section>
-<section class="pb-16" aria-label="Setup guides">
-  <article class="support-card">
-    <p class="text-sm">iPad · Mac mini · VNC · Tailscale</p>
-    <h2><a href="/guides/mac-mini-ipad-vnc-tailscale/">Access your Mac mini from an iPad using VNC and Tailscale</a></h2>
-    <p>Enable Mac Screen Sharing, save a VNC connection in GlanceVNC, and use your Mac’s Tailscale address for access away from home.</p>
-    <a class="liquid-button mt-6" href="/guides/mac-mini-ipad-vnc-tailscale/">Read the guide</a>
-  </article>
-  <p class="mt-8 text-base leading-7">Already connected and need help? Visit <a class="underline" href="/support.html">Setup &amp; Support</a> for compatibility details and troubleshooting.</p>
-</section>
-</main>
-  <footer class="site-container flex flex-col gap-3 py-10 text-sm text-black/52 sm:flex-row sm:items-center sm:justify-between">
+  <main class="site-container site-container-narrow guides-landing">
+    <section class="guides-intro" aria-labelledby="guides-title">
+      <p class="glass-chip inline-flex">Setup guides</p>
+      <h1 id="guides-title">A little setup.<br>A lot more freedom.</h1>
+      <p>Simple walkthroughs to bring your desktop to your iPad or iPhone. Start at home, then take your connection with you.</p>
+    </section>
+
+    <section aria-label="Setup guides">
+      <article class="guide-feature">
+        <div class="guide-feature-art" aria-hidden="true">
+          <svg viewBox="0 0 420 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="desktop-colour" x1="95" y1="50" x2="330" y2="210" gradientUnits="userSpaceOnUse"><stop stop-color="#ff2b93"/><stop offset="0.5" stop-color="#a85ad7"/><stop offset="1" stop-color="#2878ff"/></linearGradient>
+              <linearGradient id="device-glass" x1="60" y1="30" x2="345" y2="285" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0.85"/><stop offset="1" stop-color="white" stop-opacity="0.25"/></linearGradient>
+            </defs>
+            <rect x="74" y="47" width="274" height="187" rx="22" fill="url(#device-glass)" stroke="white" stroke-opacity="0.85"/>
+            <rect x="85" y="58" width="252" height="163" rx="14" fill="url(#desktop-colour)"/>
+            <path d="M85 177C156 93 234 218 337 100V207C337 215 331 221 323 221H99C91 221 85 215 85 207V177Z" fill="white" fill-opacity="0.16"/>
+            <rect x="106" y="81" width="122" height="9" rx="4.5" fill="white" fill-opacity="0.85"/>
+            <rect x="106" y="100" width="81" height="6" rx="3" fill="white" fill-opacity="0.45"/>
+            <rect x="172" y="248" width="183" height="36" rx="12" fill="url(#device-glass)" stroke="white" stroke-opacity="0.9"/>
+            <circle cx="337" cy="267" r="2" fill="white"/>
+            <rect x="41" y="148" width="143" height="111" rx="18" fill="url(#device-glass)" stroke="white"/>
+            <rect x="50" y="157" width="125" height="93" rx="11" fill="url(#desktop-colour)"/>
+            <path d="M51 219C96 173 127 234 174 185V239C174 245 169 250 163 250H62C56 250 51 245 51 239V219Z" fill="white" fill-opacity="0.2"/>
+            <rect x="62" y="172" width="64" height="5" rx="2.5" fill="white" fill-opacity="0.85"/>
+            <rect x="62" y="184" width="42" height="4" rx="2" fill="white" fill-opacity="0.45"/>
+          </svg>
+          <span>YOUR DESKTOP. WITH YOU.</span>
+        </div>
+        <div class="guide-feature-copy">
+          <p class="guide-feature-category">iPad &amp; Mac mini</p>
+          <h2><a href="/guides/mac-mini-ipad-vnc-tailscale/">Your Mac mini,<br>from your iPad.</a></h2>
+          <p>Set up Mac Screen Sharing with VNC, then connect away from home through Tailscale.</p>
+          <a class="liquid-button liquid-button-primary" href="/guides/mac-mini-ipad-vnc-tailscale/">Read the guide <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </section>
+
+    <aside class="guides-support" aria-labelledby="guides-support-title">
+      <div>
+        <h2 id="guides-support-title">Need a hand with your connection?</h2>
+        <p>Find compatibility details and answers to common questions.</p>
+      </div>
+      <a class="liquid-button" href="/support.html">Setup &amp; Support <span aria-hidden="true">→</span></a>
+    </aside>
+  </main>
+  <footer class="site-container site-container-narrow flex flex-col gap-3 py-10 text-sm text-black/52 sm:flex-row sm:items-center sm:justify-between">
     <span>&copy; 2026 GlanceVNC.</span>
     <span class="flex gap-5">
       <a href="/guides/">Guides</a>

@@ -1,0 +1,134 @@
+/* The guide directory uses the same glass materials as the main site. */
+.guides-intro {
+  padding: clamp(3rem, 7vw, 5rem) 0 2.5rem;
+}
+
+.guides-intro h1 {
+  margin-top: 1.4rem;
+  font-size: clamp(2.8rem, 7vw, 5.3rem);
+  line-height: 0.98;
+  font-weight: 900;
+  letter-spacing: -0.055em;
+}
+
+.guides-intro > p:last-child {
+  max-width: 36rem;
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.guide-feature {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  padding: 0.65rem;
+  border: 1px solid var(--glass-stroke);
+  border-radius: 2rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.65), rgba(255,255,255,0.25));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.95), 0 24px 64px rgba(36,45,69,0.09);
+  backdrop-filter: blur(26px) saturate(155%);
+  -webkit-backdrop-filter: blur(26px) saturate(155%);
+}
+
+.guide-feature-art {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  min-height: 21rem;
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(ellipse at 15% 15%, rgba(255,43,147,0.24), transparent 65%),
+    radial-gradient(ellipse at 90% 85%, rgba(40,120,255,0.27), transparent 65%),
+    rgba(168,90,215,0.12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+.guide-feature-art svg {
+  display: block;
+  width: 100%;
+  max-width: 26rem;
+  filter: drop-shadow(0 16px 16px rgba(54,43,100,0.13));
+}
+
+.guide-feature-art > span {
+  margin: -0.5rem 1rem 1.75rem;
+  color: rgba(17,19,24,0.6);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.guide-feature-copy {
+  padding: 1.5rem 1.5rem 1.5rem 0;
+}
+
+.guide-feature-category {
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.guide-feature h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.06;
+  font-weight: 850;
+  letter-spacing: -0.045em;
+}
+
+.guide-feature h2 a {
+  text-decoration: none;
+}
+
+.guide-feature-copy > p:not(.guide-feature-category) {
+  margin: 1.25rem 0 1.5rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 25rem;
+}
+
+.guides-landing .liquid-button {
+  gap: 0.8rem;
+}
+
+.guides-support {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0 1rem;
+  padding: 1.5rem 0;
+}
+
+.guides-support h2 {
+  font-size: 1rem;
+  font-weight: 750;
+}
+
+.guides-support p {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.guides-support .liquid-button {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .guide-feature { grid-template-columns: 1fr; gap: 0; }
+  .guide-feature-art { min-height: 0; }
+  .guide-feature-art svg { max-width: 19rem; }
+  .guide-feature-copy { padding: 1.5rem 1rem; }
+  .guides-support { align-items: flex-start; flex-direction: column; margin-top: 1rem; padding: 1.5rem 0.5rem; }
+}
