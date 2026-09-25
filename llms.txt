@@ -10,11 +10,11 @@
 - All features are included in the app purchase. No subscriptions, in-app purchases or GlanceVNC account are required. Regional prices are shown in the App Store.
 - RDP supports compatible Windows and Linux desktops, direct TLS/NLA connections and username/password sign-in (port 3389 by default). Add RDP hosts manually; nearby discovery finds VNC services. RDP gateways, Kerberos/Azure sign-in, clipboard, audio and file/device redirection are not supported.
 - Review RDP certificates in the app when approval is needed. Approval is remembered; changed certificates require a new review. Edit the connection to forget a trusted certificate.
-- Version 1.2 adds iOS/iPadOS 18 and later support, adaptive system styling, improved landscape and larger-text layouts, and a desktop rendering compatibility fix. Check the App Store for release availability.
+- Version 1.2 adds iOS/iPadOS 18 and later support, adaptive system styling, improved landscape and larger-text layouts, a desktop rendering compatibility fix, and a fix for stretched desktops after rotating between portrait and landscape. Check the App Store for release availability.
 - Version 1.1 introduced RDP and improved VNC colour-format compatibility and RDP graphics setup, and added an explanation when no RDP desktop image arrives within 15 seconds.
 - Hide the keyboard with its dismissal button or by tapping the desktop in Touch or Trackpad mode; the desktop tap still sends the usual remote click.
 - Settings → What’s New lists recent improvements alongside third-party licences and the privacy policy.
-- Features include saved connections, nearby Bonjour discovery, Touch and Trackpad controls, keyboard input, gesture help, colour-depth preferences and custom backgrounds.
+- Features include saved connections, nearby Bonjour discovery, Touch and Trackpad controls, keyboard input, gesture help, VNC colour-depth preferences and custom backgrounds.
 - Switch Touch/Trackpad mode during a session through session Settings. Home-screen Settings controls the default for future connections.
 - Compatible legacy Apple Remote Desktop authentication and standard VNC password authentication are supported. Newer Apple Screen Sharing authentication, Tight Security and VeNCrypt are not supported; see the support page for details.
 
