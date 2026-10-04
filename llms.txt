@@ -4,12 +4,13 @@
 
 ## Product facts
 
-- Version 1.3 requires iOS 18 or later on iPhone, or iPadOS 18 or later on iPad.
+- Version 1.4 requires iOS 18 or later on iPhone, or iPadOS 18 or later on iPad. Check the App Store for the currently available version.
 - Connects to Mac, Windows PC, Linux and Raspberry Pi computers running a compatible VNC or RDP server, or Mac Screen Sharing, that the iPhone or iPad can reach. GlanceVNC is a client, not a VNC server or hosted remote-access relay.
 - Connect over the local network, or remotely through the user's own VPN that provides access to the computer.
 - All features are included in the app purchase. No subscriptions, in-app purchases or GlanceVNC account are required. Regional prices are shown in the App Store.
 - RDP supports compatible Windows and Linux desktops, direct TLS/NLA connections and username/password sign-in (port 3389 by default). Add RDP hosts manually; nearby discovery finds VNC services. RDP gateways, Kerberos/Azure sign-in, audio and file/device redirection are not supported. Version 1.3 supports plain-text clipboard exchange.
 - Review RDP certificates in the app when approval is needed. Approval is remembered; changed certificates require a new review. Edit the connection to forget a trusted certificate.
+- Version 1.4 improves zoomed control. In Trackpad mode, pinch zoom centres on the remote pointer and the view follows it during one-finger movement, stopping at desktop edges so the pointer can reach them. In Touch mode, pinch around the desired area and tap directly while the view stays still. Switching modes preserves zoom. Pinch zoom is always available; two-finger swipes still scroll the remote computer.
 - Version 1.3 adds plain-text clipboard exchange for compatible VNC, Mac Screen Sharing and RDP sessions using Copy from remote and Paste to remote in the expanded toolbar. Paste to remote updates the remote clipboard; use the remote app’s Paste command to insert text. iOS may request permission to read device clipboard text. Images and files are not supported.
 - Version 1.3 improves TigerVNC desktop loading on Linux, including CachyOS. Mac Screen Sharing waits up to 30 seconds for initial desktop dimensions and retries once automatically if desktop preparation times out. Check the App Store for release availability.
 - Version 1.2 adds iOS/iPadOS 18 and later support, adaptive system styling, improved landscape and larger-text layouts, a desktop rendering compatibility fix, and a fix for stretched desktops after rotating between portrait and landscape. Check the App Store for release availability.
@@ -41,4 +42,4 @@ Saved connection metadata can sync through the user's private iCloud database, i
 
 Support: support@glancevnc.com
 
-This file summarises the linked public pages. Last updated: 2026-09-27.
+This file summarises the linked public pages. Last updated: 2026-10-04.
