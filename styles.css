@@ -240,42 +240,6 @@ h3 {
     linear-gradient(135deg, rgba(255, 43, 147, 0.86), rgba(168, 90, 215, 0.78) 48%, rgba(40, 120, 255, 0.86));
 }
 
-.phone-aura {
-  position: absolute;
-  inset: 3rem 0 -1rem;
-  border-radius: 999px;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(255, 43, 147, 0.35), transparent 42%),
-    radial-gradient(circle at 75% 50%, rgba(40, 120, 255, 0.34), transparent 45%);
-  filter: blur(28px);
-}
-
-.phone-shell {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 0.47;
-  border: 1px solid rgba(255, 255, 255, 0.78);
-  border-radius: 3rem;
-  padding: 0.55rem;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.18)),
-    rgba(255, 255, 255, 0.28);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    0 34px 90px rgba(31, 38, 60, 0.2);
-  backdrop-filter: blur(32px) saturate(165%);
-  -webkit-backdrop-filter: blur(32px) saturate(165%);
-}
-
-.phone-screenshot {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 2.35rem;
-}
-
 .material-card,
 .support-card {
   border: 1px solid var(--glass-stroke);
@@ -378,13 +342,11 @@ h3 {
   .glass-chip,
   h1,
   .liquid-button,
-  .phone-shell,
   .material-card,
   .support-card {
     animation: settle 700ms cubic-bezier(0.2, 0.82, 0.2, 1) both;
   }
 
-  .phone-shell,
   .material-card:nth-child(2),
   .support-card:nth-child(2) {
     animation-delay: 70ms;
