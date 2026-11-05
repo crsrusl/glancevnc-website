@@ -6,7 +6,7 @@ on every page load. Do not add another page-view event for the funnel.
 `assets/analytics.js` sends `app_store_click` when a visitor activates an App
 Store link, including clicks on its badge image and keyboard activation. It sends:
 
-- `cta_location`: `hero`, `download`, or `guide` for the current buttons.
+- `cta_location`: `hero`, `download`, `guide`, or `navigation` for the current buttons.
 - `page_path`: the page containing the link.
 - `link_url`: the App Store destination.
 

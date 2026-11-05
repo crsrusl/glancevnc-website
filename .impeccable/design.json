@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T12:08:13.639062+00:00",
+  "title": "Design System: GlanceVNC",
+  "extensions": {
+    "colorMeta": {
+      "blue": {
+        "role": "primary",
+        "displayName": "Exhibition Blue",
+        "tonalRamp": [
+          "oklch(15% 0.2532 264.84)",
+          "oklch(26% 0.2532 264.84)",
+          "oklch(38% 0.2532 264.84)",
+          "oklch(49% 0.2532 264.84)",
+          "oklch(61% 0.2532 264.84)",
+          "oklch(72% 0.2532 264.84)",
+          "oklch(84% 0.2532 264.84)",
+          "oklch(95% 0.2532 264.84)"
+        ]
+      },
+      "blue-deep": {
+        "role": "primary",
+        "displayName": "Deep Exhibition Blue",
+        "tonalRamp": [
+          "oklch(15% 0.2075 264.90)",
+          "oklch(26% 0.2075 264.90)",
+          "oklch(38% 0.2075 264.90)",
+          "oklch(49% 0.2075 264.90)",
+          "oklch(61% 0.2075 264.90)",
+          "oklch(72% 0.2075 264.90)",
+          "oklch(84% 0.2075 264.90)",
+          "oklch(95% 0.2075 264.90)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Navy Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0518 262.34)",
+          "oklch(26% 0.0518 262.34)",
+          "oklch(38% 0.0518 262.34)",
+          "oklch(49% 0.0518 262.34)",
+          "oklch(61% 0.0518 262.34)",
+          "oklch(72% 0.0518 262.34)",
+          "oklch(84% 0.0518 262.34)",
+          "oklch(95% 0.0518 262.34)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "tonalRamp": [
+          "oklch(15% 0.0425 261.13)",
+          "oklch(26% 0.0425 261.13)",
+          "oklch(38% 0.0425 261.13)",
+          "oklch(49% 0.0425 261.13)",
+          "oklch(61% 0.0425 261.13)",
+          "oklch(72% 0.0425 261.13)",
+          "oklch(84% 0.0425 261.13)",
+          "oklch(95% 0.0425 261.13)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0070 268.55)",
+          "oklch(26% 0.0070 268.55)",
+          "oklch(38% 0.0070 268.55)",
+          "oklch(49% 0.0070 268.55)",
+          "oklch(61% 0.0070 268.55)",
+          "oklch(72% 0.0070 268.55)",
+          "oklch(84% 0.0070 268.55)",
+          "oklch(95% 0.0070 268.55)"
+        ]
+      },
+      "sky": {
+        "role": "neutral",
+        "displayName": "Pale Sky",
+        "tonalRamp": [
+          "oklch(15% 0.0281 251.46)",
+          "oklch(26% 0.0281 251.46)",
+          "oklch(38% 0.0281 251.46)",
+          "oklch(49% 0.0281 251.46)",
+          "oklch(61% 0.0281 251.46)",
+          "oklch(72% 0.0281 251.46)",
+          "oklch(84% 0.0281 251.46)",
+          "oklch(95% 0.0281 251.46)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Fine Rule",
+        "tonalRamp": [
+          "oklch(15% 0.0179 253.35)",
+          "oklch(26% 0.0179 253.35)",
+          "oklch(38% 0.0179 253.35)",
+          "oklch(49% 0.0179 253.35)",
+          "oklch(61% 0.0179 253.35)",
+          "oklch(72% 0.0179 253.35)",
+          "oklch(84% 0.0179 253.35)",
+          "oklch(95% 0.0179 253.35)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Reading White",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Exhibition Display",
+        "purpose": "Primary page and hero titles; responsive overrides are documented in DESIGN.md."
+      },
+      "body": {
+        "displayName": "Reading Text",
+        "purpose": "Shared body text with generous leading for setup and help."
+      }
+    },
+    "shadows": [
+      {
+        "name": "device-exhibit",
+        "value": "0 28px 60px #00000030",
+        "purpose": "Only the framed product capture."
+      }
+    ],
+    "motion": [
+      {
+        "name": "screen-arrival",
+        "value": "850ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "One image arrival: translateY(24px) to 0 and saturate(.7) to 1, only with no motion preference."
+      },
+      {
+        "name": "control-color",
+        "value": "160ms ease-out",
+        "purpose": "Background and text-color transitions, only with no motion preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-hero",
+        "value": "1500px",
+        "purpose": "Minimum width: wider hero gap."
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1100px",
+        "purpose": "Maximum width: compact hero and grids."
+      },
+      {
+        "name": "tablet",
+        "value": "800px",
+        "purpose": "Maximum width: stack main composition and use 20px gutters."
+      },
+      {
+        "name": "phone",
+        "value": "540px",
+        "purpose": "Maximum width: single-column reading and compact controls."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Shared action with a visible keyboard focus state.",
+      "html": "<a class=\"ds-button-primary\" href=\"#setup\">Check your setup</a>",
+      "css": ".ds-button-primary{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:13px 22px;border-radius:7px;border:1px solid transparent;font-weight:600;line-height:1.4;text-decoration:none;font-family:\"Schibsted Grotesk\",Arial,sans-serif;background:var(--blue);color:var(--white);}.ds-button-primary:hover{background:var(--blue-deep);}.ds-button-primary:focus-visible{outline:3px solid var(--blue);outline-offset:5px;}@media(prefers-reduced-motion:no-preference){.ds-button-primary{transition:background-color 160ms ease-out,color 160ms ease-out;}}"
+    },
+    {
+      "name": "Light Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Shared action with a visible keyboard focus state.",
+      "html": "<a class=\"ds-button-light\" href=\"#setup\">Check your setup</a>",
+      "css": ".ds-button-light{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:13px 22px;border-radius:7px;border:1px solid transparent;font-weight:600;line-height:1.4;text-decoration:none;font-family:\"Schibsted Grotesk\",Arial,sans-serif;background:var(--white);color:var(--blue-deep);}.ds-button-light:hover{background:var(--sky);}.ds-button-light:focus-visible{outline:3px solid var(--blue);outline-offset:5px;}@media(prefers-reduced-motion:no-preference){.ds-button-light{transition:background-color 160ms ease-out,color 160ms ease-out;}}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Shared action with a visible keyboard focus state.",
+      "html": "<a class=\"ds-button-outline\" href=\"#setup\">Check your setup</a>",
+      "css": ".ds-button-outline{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:13px 22px;border-radius:7px;border:1px solid transparent;font-weight:600;line-height:1.4;text-decoration:none;font-family:\"Schibsted Grotesk\",Arial,sans-serif;background:transparent;color:var(--ink);border-color:currentColor;}.ds-button-outline:hover{background:var(--sky);color:var(--blue-deep);}.ds-button-outline:focus-visible{outline:3px solid var(--blue);outline-offset:5px;}@media(prefers-reduced-motion:no-preference){.ds-button-outline{transition:background-color 160ms ease-out,color 160ms ease-out;}}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Native labeled support search; filtering is supplied by site.js.",
+      "html": "<label class=\"ds-search\">Search all support answers<input type=\"search\" placeholder=\"Try password, Pencil or RDP\"></label>",
+      "css": ".ds-search{display:block;color:var(--ink);font-size:.9rem;font-weight:600;font-family:\"Schibsted Grotesk\",Arial,sans-serif;}.ds-search input{display:block;width:100%;margin-top:9px;padding:15px 17px;border:1px solid #97a5bb;border-radius:6px;background:var(--white);color:var(--ink);caret-color:var(--blue);font:inherit;font-weight:400;}.ds-search input::placeholder{color:var(--muted);}.ds-search input:focus-visible{outline:3px solid var(--blue);outline-offset:5px;}"
+    },
+    {
+      "name": "Main Navigation",
+      "kind": "nav",
+      "description": "Reading links use sky hover and current-page treatment.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#guides\" aria-current=\"page\">Guides</a><a href=\"#support\">Support</a></nav>",
+      "css": ".ds-nav{display:flex;gap:6px;background:var(--white);font-family:\"Schibsted Grotesk\",Arial,sans-serif;}.ds-nav a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 14px;border-radius:6px;text-decoration:none;font-size:.9rem;font-weight:550;color:var(--ink);}.ds-nav a:hover,.ds-nav a[aria-current=page]{background:var(--sky);color:var(--blue-deep);}.ds-nav a:focus-visible{outline:3px solid var(--blue);outline-offset:5px;}"
+    },
+    {
+      "name": "Platform Tab",
+      "kind": "button",
+      "refersTo": "platform-tab",
+      "description": "Selected platform appearance; full keyboard tab behavior is supplied by site.js.",
+      "html": "<button class=\"ds-tab\" type=\"button\" aria-pressed=\"true\">Mac</button>",
+      "css": ".ds-tab{border:0;min-height:48px;padding:12px 23px;border-radius:6px;font-size:1rem;font-weight:600;background:var(--paper);color:var(--ink);font-family:\"Schibsted Grotesk\",Arial,sans-serif;}.ds-tab:hover{background:var(--sky);}.ds-tab[aria-pressed=true]{background:var(--blue);color:var(--white);}.ds-tab:focus-visible{outline:3px solid var(--blue);outline-offset:5px;}"
+    },
+    {
+      "name": "Setup Surface",
+      "kind": "card",
+      "refersTo": "setup-surface",
+      "description": "Quiet white workbench contained within the sky setup field.",
+      "html": "<div class=\"ds-field\"><section class=\"ds-surface\"><h3>Your Mac, on your iPad.</h3><p>Enable Mac Screen Sharing and set a VNC password.</p></section></div>",
+      "css": ".ds-field{background:var(--sky);padding:24px;font-family:\"Schibsted Grotesk\",Arial,sans-serif;}.ds-surface{background:var(--white);color:var(--ink);border-radius:var(--radius);padding:36px;}.ds-surface h3{margin:0 0 15px;font-size:1.8rem;font-weight:650;line-height:1.08;letter-spacing:-.035em;}.ds-surface p{margin:0;color:var(--muted);line-height:1.6;}@media(max-width:800px){.ds-surface{padding:25px;}}@media(max-width:540px){.ds-surface{padding:20px;}}"
+    },
+    {
+      "name": "FAQ Disclosure",
+      "kind": "custom",
+      "description": "Native disclosure with ruled separation and a CSS chevron.",
+      "html": "<details class=\"ds-faq\"><summary>Which devices can run GlanceVNC?</summary><p>GlanceVNC requires iOS 18 or later on iPhone, or iPadOS 18 or later on iPad.</p></details>",
+      "css": ".ds-faq{border-block:1px solid var(--line);color:var(--ink);font-family:\"Schibsted Grotesk\",Arial,sans-serif;}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:19px 0;list-style:none;font-weight:550;line-height:1.55;cursor:pointer;}.ds-faq summary::-webkit-details-marker{display:none;}.ds-faq summary:after{content:\"\";width:9px;height:9px;border-right:1.5px solid var(--blue);border-bottom:1.5px solid var(--blue);transform:rotate(45deg);flex:0 0 9px;margin:-5px 6px 0 0;}.ds-faq[open] summary{color:var(--blue-deep);}.ds-faq[open] summary:after{transform:rotate(225deg);margin-top:4px;}.ds-faq p{margin:0;max-width:74ch;padding:0 32px 23px 0;color:var(--muted);font-size:.95rem;line-height:1.6;}.ds-faq summary:focus-visible{outline:3px solid var(--blue);outline-offset:5px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Computer exhibition",
+    "overview": "Computer exhibition presents the real app in solid blue fields, with cool white reading space and navy lettering. Large, tightly spaced grotesk headlines give the site confidence; quieter body text and precise dividers keep setup and compatibility information approachable.\n\nThe same system serves first-time visitors and experienced remote desktop users. Product imagery remains genuine, while Support, Privacy and Guides use clear white reading surfaces instead of repeating the promotional hero treatment.",
+    "keyCharacteristics": [
+      "Solid exhibition blue and generous real product imagery.",
+      "One self-hosted type family with a distinct display and reading hierarchy.",
+      "Flat reading surfaces, precise dividers and restrained rounded controls.",
+      "Visible keyboard focus and progressively enhanced native interactions."
+    ],
+    "rules": [
+      {
+        "name": "The Clear Reading Rule",
+        "body": "Keep extended instructions on white; use sky for bounded help and setup regions, and blue for exhibition and acquisition fields.",
+        "section": "colors"
+      },
+      {
+        "name": "The Real Evidence Rule",
+        "body": "Use genuine product captures with their provenance retained; do not invent remote sessions or product UI.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve the app identity, genuine screenshots and their provenance.",
+      "Do use white reading surfaces and muted text with navy headings for longer help content.",
+      "Do retain visible focus, native disclosure behavior and keyboard navigation when extending components.",
+      "Do keep the self-hosted font and its OFL license together."
+    ],
+    "donts": [
+      "Don't introduce glass, decorative glows or numbered feature tiles into this world.",
+      "Don't replace real app evidence with invented screenshots.",
+      "Don't turn the informational connection rail into an implied live connection state.",
+      "Don't animate when the visitor requests reduced motion."
+    ]
+  }
+}

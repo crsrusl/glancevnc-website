@@ -32,24 +32,7 @@
   <meta name="twitter:image" content="https://glancevnc.com/assets/social-preview.png">
   <meta name="twitter:image:alt" content="GlanceVNC app icon and remote desktop app description">
   <link rel="canonical" href="https://glancevnc.com/guides/mac-mini-ipad-vnc-tailscale/">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Helvetica', 'Helvetica Neue', 'Arial', 'sans-serif']
-          },
-          colors: {
-            glassPink: '#ff2b93',
-            glassViolet: '#a85ad7',
-            glassBlue: '#2878ff'
-          }
-        }
-      }
-    };
-  </script>
-  <link rel="stylesheet" href="/styles.css?v=20260925">
+<link rel="stylesheet" href="/styles.css?v=20261105">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -69,30 +52,23 @@
   "mainEntityOfPage": "https://glancevnc.com/guides/mac-mini-ipad-vnc-tailscale/"
 }
   </script>
+  <link rel="icon" href="/assets/app-icon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/schibsted-grotesk-variable.ttf" as="font" type="font/ttf" crossorigin>
+  <script defer src="/assets/site.js"></script>
 </head>
-<body class="min-h-screen overflow-x-hidden bg-[#f5f6fb] text-[#111318] antialiased">
-  <header class="site-container sticky top-3 z-50">
-    <div class="liquid-bar flex items-center justify-between gap-3 rounded-[28px] px-3 py-3 sm:px-4">
-      <a class="flex min-w-0 items-center gap-3 text-sm font-bold text-white no-underline" href="/" aria-label="GlanceVNC home">
-        <img class="h-11 w-11 rounded-[14px] shadow-glow" src="/assets/app-icon.svg" alt="" aria-hidden="true">
-        <span class="truncate">GlanceVNC</span>
-      </a>
-      <nav class="flex items-center gap-1 rounded-full bg-white/10 p-1 text-sm font-semibold text-white/80" aria-label="Main navigation">
-        <a class="nav-pill" href="/guides/">Guides</a>
-        <a class="nav-pill" href="/support.html">Support</a>
-      </nav>
-    </div>
-  </header>
-<main class="site-container guide-container">
-<article class="guide-article py-10 md:py-16">
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner">
+  <a class="brand" href="/" aria-label="GlanceVNC home"><img src="/assets/app-icon.svg" width="38" height="38" alt=""><span>GlanceVNC</span></a>
+  <nav class="main-nav" aria-label="Main navigation"><a class="nav-setup" href="/#setup">Check your setup</a><a href="/guides/" aria-current="page">Guides</a><a href="/support.html">Support</a><a class="nav-download" data-cta-location="navigation" href="https://apps.apple.com/gb/app/glancevnc/id6768106616">Get the app</a></nav>
+</div></header><main id="main" class="reading-container"><article class="guide-article">
   <nav class="guide-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a></nav>
   <header class="guide-heading">
-    <p class="glass-chip inline-flex">iPad remote desktop</p>
     <h1>Access your Mac mini from an iPad using VNC and Tailscale</h1>
     <p class="guide-intro">Keep your Mac mini at home and use its desktop from your iPad. Start with a local VNC connection in GlanceVNC, then use Tailscale to reach the same Mac when you’re away.</p>
     <p class="guide-meta">By Chris Russell, GlanceVNC developer · Updated <time datetime="2026-09-25">25 September 2026</time></p>
   </header>
-  <nav class="support-card guide-contents" aria-label="On this page">
+  <nav class="guide-contents" aria-label="On this page">
     <h2>In this guide</h2>
     <ol><li><a href="#requirements">What you need</a></li><li><a href="#screen-sharing">Enable Mac Screen Sharing</a></li><li><a href="#local-connection">Connect your iPad locally</a></li><li><a href="#tailscale">Connect through Tailscale</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ol>
   </nav>
@@ -145,15 +121,6 @@
     <a class="app-store-badge" data-cta-location="guide" href="https://apps.apple.com/gb/app/glancevnc/id6768106616"><img src="/assets/app-store-badge.svg" width="180" height="60" alt="Download on the App Store"></a>
     <p><a href="/">Explore GlanceVNC</a></p>
   </aside>
-</article>
-</main>
-  <footer class="site-container flex flex-col gap-3 py-10 text-sm text-black/52 sm:flex-row sm:items-center sm:justify-between">
-    <span>&copy; 2026 GlanceVNC.</span>
-    <span class="flex gap-5">
-      <a href="/guides/">Guides</a>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/support.html">Support</a>
-    </span>
-  </footer>
+</article></main><footer class="site-footer"><div class="container footer-inner"><p class="footer-info"><strong>GlanceVNC</strong>By Chris Russell. &copy; 2026 GlanceVNC.</p><nav class="footer-nav" aria-label="Footer navigation"><a href="/guides/">Guides</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy Policy</a></nav></div></footer>
 </body>
 </html>

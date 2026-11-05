@@ -1,0 +1,7 @@
+# Local visual validation artifacts; design records remain tracked.
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/build/
+.impeccable/questions/
+.impeccable/config.local.json
+.DS_Store
