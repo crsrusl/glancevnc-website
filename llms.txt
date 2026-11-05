@@ -4,12 +4,17 @@
 
 ## Product facts
 
-- Version 1.4 requires iOS 18 or later on iPhone, or iPadOS 18 or later on iPad. Check the App Store for the currently available version.
+- GlanceVNC requires iOS 18 or later on iPhone, or iPadOS 18 or later on iPad. Check the App Store for the currently available version.
 - Connects to Mac, Windows PC, Linux and Raspberry Pi computers running a compatible VNC or RDP server, or Mac Screen Sharing, that the iPhone or iPad can reach. GlanceVNC is a client, not a VNC server or hosted remote-access relay.
 - Connect over the local network, or remotely through the user's own VPN that provides access to the computer.
 - All features are included in the app purchase. No subscriptions, in-app purchases or GlanceVNC account are required. Regional prices are shown in the App Store.
 - RDP supports compatible Windows and Linux desktops, direct TLS/NLA connections and username/password sign-in (port 3389 by default). Add RDP hosts manually; nearby discovery finds VNC services. RDP gateways, Kerberos/Azure sign-in, audio and file/device redirection are not supported. Version 1.3 supports plain-text clipboard exchange.
 - Review RDP certificates in the app when approval is needed. Approval is remembered; changed certificates require a new review. Edit the connection to forget a trusted certificate.
+- Version 1.7 refreshes Saved Connections, Nearby Connections and Settings. iPhone uses a tab bar in portrait and landscape; iPad uses a sidebar. Connection cards can show saved desktop thumbnails or placeholders, and nearby VNC desktops can be opened without saving them.
+- Version 1.7 adds direct Apple Pencil pointer support on iPad: tip contact clicks, movement while held drags, and hover moves the cursor on supported iPads. Pressure-sensitive drawing, tilt, squeeze and Pencil double-tap actions are not supported.
+- Hardware keyboards work on connection. Command+C/X/A/Z and Command+Shift+Z send remote copy, cut, select all, undo and redo. Command+V transfers and pastes device clipboard text; Command+Shift+V pastes existing remote clipboard text. The connection's Operating System setting uses remote Command for Mac and Control for Windows or Linux.
+- Each connection stores its starting pointer mode, display mode and VNC colour depth on this device. Fill screen crops without stretching; Fit whole desktop shows the complete remote display. Supported servers can resize to a landscape session area; Mac Screen Sharing keeps the Mac's display resolution.
+- Optional strict certificate security verifies RDP and compatible VeNCrypt 0.2 VNC servers using system trust, an imported public certificate or a SHA-256 fingerprint. It blocks failed verification without an approval override or unencrypted fallback. RDP uses TLS; strict VNC security requires an X.509 VeNCrypt mode and is not available with standard Mac Screen Sharing.
 - Version 1.4 improves zoomed control. In Trackpad mode, pinch zoom centres on the remote pointer and the view follows it during one-finger movement, stopping at desktop edges so the pointer can reach them. In Touch mode, pinch around the desired area and tap directly while the view stays still. Switching modes preserves zoom. Pinch zoom is always available; two-finger swipes still scroll the remote computer.
 - Version 1.3 adds plain-text clipboard exchange for compatible VNC, Mac Screen Sharing and RDP sessions using Copy from remote and Paste to remote in the expanded toolbar. Paste to remote updates the remote clipboard; use the remote app’s Paste command to insert text. iOS may request permission to read device clipboard text. Images and files are not supported.
 - Version 1.3 improves TigerVNC desktop loading on Linux, including CachyOS. Mac Screen Sharing waits up to 30 seconds for initial desktop dimensions and retries once automatically if desktop preparation times out. Check the App Store for release availability.
@@ -17,13 +22,13 @@
 - Version 1.1 introduced RDP and improved VNC colour-format compatibility and RDP graphics setup, and added an explanation when no RDP desktop image arrives within 15 seconds.
 - Hide the keyboard with its dismissal button or by tapping the desktop in Touch or Trackpad mode; the desktop tap still sends the usual remote click.
 - Settings → What’s New shows a text-based version history alongside third-party licences and the privacy policy.
-- Features include saved connections, nearby Bonjour discovery, Touch and Trackpad controls, keyboard input, gesture help, VNC colour-depth preferences and custom backgrounds.
-- Switch Touch/Trackpad mode during a session through session Settings. Home-screen Settings controls the default for future connections.
-- Compatible legacy Apple Remote Desktop authentication and standard VNC password authentication are supported. Newer Apple Screen Sharing authentication, Tight Security and VeNCrypt are not supported; see the support page for details.
+- Features include saved connections, nearby Bonjour discovery, Touch and Trackpad controls, keyboard input, gesture help, per-connection VNC colour-depth preferences, connection thumbnails and custom backgrounds.
+- Switch Touch/Trackpad mode during a session through session Settings. Edit a connection's Session Preferences to set its starting mode.
+- Compatible legacy Apple Remote Desktop authentication, standard VNC password authentication and certificate-backed VeNCrypt 0.2 modes are supported. Newer Apple Screen Sharing authentication, Tight Security and anonymous TLS are not supported; see the support page for details.
 
 ## Privacy and storage
 
-Saved connection metadata can sync through the user's private iCloud database, including protocol, approved RDP certificate fingerprint, remote computer profile and VNC sharing preference. Passwords are stored separately in Apple Keychain and can sync through iCloud Keychain when enabled. Desktop thumbnails and custom backgrounds stay on the device. The app does not send remote desktop content to the developer or include advertising, tracking SDKs or in-app analytics collection. The website separately uses Google Analytics to measure visits and page usage. See the privacy policy for full details.
+Saved connection metadata can sync through the user's private iCloud database, including protocol and certificate security settings. The Operating System choice stays on the device. Passwords are stored separately in Apple Keychain and can sync through iCloud Keychain when enabled. Per-connection session preferences, desktop thumbnails and custom backgrounds stay on the device. The app does not send remote desktop content to the developer or include advertising, tracking SDKs or in-app analytics collection. The website separately uses Google Analytics to measure visits and page usage. See the privacy policy for full details.
 
 ## Official sources
 
@@ -42,4 +47,4 @@ Saved connection metadata can sync through the user's private iCloud database, i
 
 Support: support@glancevnc.com
 
-This file summarises the linked public pages. Last updated: 2026-10-04.
+This file summarises the linked public pages. Last updated: 2026-11-05.

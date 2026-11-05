@@ -60,7 +60,7 @@
   "inLanguage": "en-GB",
   "headline": "Access your Mac mini from an iPad using VNC and Tailscale",
   "datePublished": "2026-09-25",
-  "dateModified": "2026-09-25",
+  "dateModified": "2026-11-05",
   "author": {
     "@type": "Person",
     "name": "Chris Russell",
@@ -111,12 +111,12 @@
   </section>
   <section id="local-connection">
     <h2>2. Connect from your iPad on the local network</h2>
-    <p>Connect the iPad to the same trusted network as the Mac. Open GlanceVNC, allow Local Network access if prompted, then tap <strong>Add</strong>. Enter these connection settings:</p>
+    <p>Connect the iPad to the same trusted network as the Mac. Open GlanceVNC, allow Local Network access if prompted, then open Saved Connections and tap <strong>Add Connection (+)</strong>. Enter these connection settings:</p>
     <div class="guide-table-wrap"><table><caption>GlanceVNC connection settings</caption><thead><tr><th scope="col">Field</th><th scope="col">Value</th></tr></thead><tbody>
-    <tr><th scope="row">Protocol</th><td>VNC</td></tr><tr><th scope="row">Name</th><td>A name you recognise, such as Mac mini — Home</td></tr><tr><th scope="row">Host or IP address</th><td>Your Mac’s local IP address</td></tr><tr><th scope="row">Port</th><td>5900, unless your server uses a different port</td></tr><tr><th scope="row">Username</th><td>Leave blank for VNC password authentication</td></tr><tr><th scope="row">VNC password</th><td>The password configured in Screen Sharing</td></tr><tr><th scope="row">Sign In → Method</th><td>VNC password</td></tr><tr><th scope="row">Remote Machine → Profile</th><td>macOS</td></tr>
+    <tr><th scope="row">Protocol</th><td>VNC</td></tr><tr><th scope="row">Name</th><td>A name you recognise, such as Mac mini — Home</td></tr><tr><th scope="row">Host or IP address</th><td>Your Mac’s local IP address</td></tr><tr><th scope="row">Port</th><td>5900, unless your server uses a different port</td></tr><tr><th scope="row">Username</th><td>Leave blank for VNC password authentication</td></tr><tr><th scope="row">Operating System</th><td>Mac (the default)</td></tr><tr><th scope="row">VNC password</th><td>The password configured in Screen Sharing</td></tr><tr><th scope="row">Sign In → Method</th><td>VNC password</td></tr>
     </tbody></table></div>
     <p>Save the connection and connect. Confirm that the desktop appears and you can move the pointer and type. Resolving any local connection problem first makes remote setup easier to diagnose.</p>
-    <p>GlanceVNC offers Touch and Trackpad controls and an on-screen keyboard. See <a href="/support.html">Setup &amp; Support</a> for gestures and supported VNC authentication methods.</p>
+    <p>GlanceVNC offers Touch and Trackpad controls, Apple Pencil pointer support on iPad, and on-screen or hardware keyboard input. See <a href="/support.html">Setup &amp; Support</a> for gestures and supported VNC authentication methods.</p>
   </section>
   <section id="tailscale">
     <h2>3. Reach the Mac mini through Tailscale</h2>
@@ -131,7 +131,7 @@
     <h3>The connection times out</h3>
     <p>Check that the Mac is awake, Screen Sharing is on, and the saved address belongs to the Mac. For remote access, check both Tailscale clients are connected and their access rules and the Mac firewall permit the VNC connection. Use the Tailscale address rather than the home-network address.</p>
     <h3>The password is rejected</h3>
-    <p>Select VNC password under Sign In and use the separately configured Screen Sharing password. GlanceVNC does not support newer Apple Screen Sharing authentication methods, Tight Security or VeNCrypt. Enabling a compatible VNC password configuration is essential.</p>
+    <p>Select VNC password under Sign In and use the separately configured Screen Sharing password. GlanceVNC does not support newer Apple Screen Sharing authentication methods or Tight Security. Its optional certificate-backed VeNCrypt mode works with compatible VNC servers, but standard Mac Screen Sharing does not offer it. Enabling a compatible VNC password configuration is essential for this guide.</p>
     <h3>It works at home but not away</h3>
     <p>Check that you selected the saved Tailscale connection. A working local connection confirms the Mac’s VNC setup, but does not establish that the remote network path is available.</p>
     <h3>Can I use another VPN?</h3>
