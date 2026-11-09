@@ -3,7 +3,7 @@
   <header class="guide-heading">
     <h1>Access your Mac mini from an iPad using VNC and Tailscale</h1>
     <p class="guide-intro">Keep your Mac mini at home and use its desktop from your iPad. Start with a local VNC connection in GlanceVNC, then use Tailscale to reach the same Mac when you’re away.</p>
-    <p class="guide-meta">By Chris Russell, GlanceVNC developer · Updated <time datetime="2026-09-25">25 September 2026</time></p>
+    <p class="guide-meta">By Chris Russell, GlanceVNC developer · Updated <time datetime="2026-11-09">9 November 2026</time></p>
   </header>
   <nav class="guide-contents" aria-label="On this page">
     <h2>In this guide</h2>
@@ -22,6 +22,7 @@
     <p>Use the VNC password you just configured, rather than your Mac account password. The exact controls can vary with macOS version. See <a href="https://support.apple.com/guide/mac-help/turn-screen-sharing-on-or-off-mh11848/mac">Apple’s Screen Sharing instructions</a>.</p>
     <p>Keep VNC access on a trusted network or inside your VPN. Standard VNC does not encrypt the desktop session; do not forward port 5900 from your router to the public internet for this setup.</p>
   </section>
+  <figure class="guide-capture"><img src="/assets/ipad-saved-connections.jpg" width="1600" height="1200" loading="lazy" alt="GlanceVNC Saved Connections on iPad with example Mac and Linux desktops"><figcaption>Saved Connections in GlanceVNC on iPad. Example destinations shown.</figcaption></figure>
   <section id="local-connection">
     <h2>2. Connect from your iPad on the local network</h2>
     <p>Connect the iPad to the same trusted network as the Mac. Open GlanceVNC, allow Local Network access if prompted, then open Saved Connections and tap <strong>Add Connection (+)</strong>. Enter these connection settings:</p>

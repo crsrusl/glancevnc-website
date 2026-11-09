@@ -7,6 +7,8 @@ import html
 import json
 import shutil
 import xml.etree.ElementTree as ET
+from discovery import write_llms
+from guide_content import GUIDES, UPDATED, article
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "dist"
@@ -647,6 +649,31 @@ PAGES = {'/': {'title': 'GlanceVNC - VNC and RDP viewer for iPhone and iPad',
                                                               'mainEntityOfPage': 'https://glancevnc.com/guides/mac-mini-ipad-vnc-tailscale/'}}}
 
 
+# Guides are registered once for HTML, sitemap and the generated LLM reference.
+for guide in GUIDES:
+    route = '/guides/' + guide['slug'] + '/'
+    PAGES[route] = {
+        'title': guide['title'] + ' | GlanceVNC', 'description': guide['description'],
+        'content': article(guide), 'section': 'guides',
+        'structured_data': {
+            '@context': 'https://schema.org', '@type': 'TechArticle',
+            '@id': DOMAIN + route + '#article', 'url': DOMAIN + route,
+            'headline': guide['title'], 'description': guide['description'],
+            'datePublished': UPDATED, 'dateModified': UPDATED, 'inLanguage': 'en-GB',
+            'author': {'@type': 'Person', '@id': DOMAIN + '/#developer', 'name': 'Chris Russell'},
+            'mainEntityOfPage': DOMAIN + route,
+        },
+    }
+PAGES['/guides/mac-mini-ipad-vnc-tailscale/']['structured_data']['dateModified'] = UPDATED
+PAGES['/guides/']['structured_data']['mainEntity'] = {
+    '@type': 'ItemList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': i, 'url': DOMAIN + route, 'name': page['title']}
+        for i, (route, page) in enumerate(
+            ((route, page) for route, page in PAGES.items() if route.startswith('/guides/') and route != '/guides/'), 1)
+    ]
+}
+
+
 def header(section):
     return Template((TEMPLATES / "header.html").read_text()).substitute(
         guides_current=' aria-current="page"' if section == "guides" else "",
@@ -665,18 +692,26 @@ def render_page(route, page):
         "description": page["description"],
         "social_description": page.get("social_description", page["description"]),
         "canonical": DOMAIN + route,
+        "og_type": "article" if route.startswith("/guides/") and route != "/guides/" else "website",
         "image_alt": page.get("image_alt", "GlanceVNC app icon and remote desktop app description"),
     }
+    schema = [page['structured_data']]
+    if route != '/':
+        crumbs = [{'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': DOMAIN + '/'}]
+        if route.startswith('/guides/') and route != '/guides/':
+            crumbs.append({'@type': 'ListItem', 'position': 2, 'name': 'Guides', 'item': DOMAIN + '/guides/'})
+        crumbs.append({'@type': 'ListItem', 'position': len(crumbs)+1, 'name': page['title'], 'item': DOMAIN + route})
+        schema.append({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': crumbs})
     context = {key: html.escape(value, quote=True) for key, value in metadata.items()}
     context.update(
         header=header(page.get("section", "")),
         footer=footer(),
-        content=(TEMPLATES / "pages" / page["template"]).read_text(),
+        content=page["content"] if "content" in page else (TEMPLATES / "pages" / page["template"]).read_text(),
         extra_stylesheets="\n".join(
             f'  <link rel="stylesheet" href="{html.escape(url, quote=True)}">'
             for url in page.get("stylesheets", [])
         ),
-        structured_data=json.dumps(page["structured_data"], ensure_ascii=False, indent=2).replace("</", "<\\/"),
+        structured_data=json.dumps(schema, ensure_ascii=False, indent=2).replace("</", "<\\/"),
     )
     return Template((TEMPLATES / "base.html").read_text()).substitute(context)
 
@@ -706,7 +741,7 @@ def build():
             target /= "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(content)
-    for name in ("styles.css", "llms.txt", "assets", "guides/guides.css"):
+    for name in ("styles.css", "assets", "guides/guides.css"):
         copy_public(ROOT / name, OUT / name)
 
     ET.register_namespace("", SITEMAP_NS)
@@ -721,6 +756,9 @@ def build():
     (OUT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n"
     )
+    write_llms(OUT, DOMAIN, PAGES, 'GlanceVNC')
+    # Retain the historical root reference as a generated mirror, never a second source.
+    (ROOT / 'llms.txt').write_text((OUT / 'llms.txt').read_text())
     print(f"Built {len(PAGES)} template pages, assets, sitemap.xml and robots.txt in {OUT}")
 
 
