@@ -1,22 +1,39 @@
 # GlanceVNC website
 
-A static website with a dependency-free Python build. Edit the root HTML pages,
-`styles.css`, `assets/`, and `guides/`, then build:
+A static website generated from shared templates with a dependency-free Python
+build, following the same pattern as GlanceSSH:
 
 ```sh
 python3 build.py
 ```
 
-The deployable website is written to `dist/`. Each build starts with a clean
-output directory, copies the public pages and assets, and generates `sitemap.xml`
-from the resulting HTML pages. Root pages keep their `.html` URLs; directory
-`index.html` pages use trailing-slash URLs. `robots.txt` is generated with the
-canonical HTTPS sitemap location. No Python packages or Node installation are
-required.
+The deployable website is written to `dist/`. The build renders all pages from
+the `PAGES` route table in `build.py`, copies public assets, and generates
+`sitemap.xml` and `robots.txt` from those same routes. Existing `.html` and
+trailing-slash URLs are preserved. No Python packages or Node installation are
+required. The output directory is cleaned so removed routes do not linger.
 
-Add a root HTML page or a page under `guides/` and rebuild to include it in the
-sitemap. Deleted source pages disappear from both the output and sitemap on the
-next build. Generated files are not committed; do not edit `dist/` directly.
+Edit the site in these locations:
+
+- `templates/base.html`: shared document head, analytics, scripts and page layout.
+- `templates/header.html` and `templates/footer.html`: shared site navigation.
+- `templates/pages/`: page-specific main content.
+- `build.py`: routes, page titles, descriptions, active navigation and structured data.
+- `styles.css`, `guides/guides.css`, and `assets/`: styling and public assets.
+
+Add a page body under `templates/pages/` and register its route in `PAGES` to
+generate the page and include it in the sitemap. Remove the route to remove it
+from the output and sitemap. Templates and project files are not deployed.
+Generated files are not committed; do not edit `dist/` directly.
+
+Validate the built site without a preview server:
+
+```sh
+python3 check.py
+```
+
+This checks generated routes, local resources, anchors, image alt attributes,
+headings, sitemap URLs and the robots sitemap declaration.
 
 Preview the built website:
 
