@@ -103,6 +103,10 @@ Let’s get you connected.
 
 Set up a computer, find your controls, or get a connection working again. Start with a guide or jump straight to an answer.
 
+For support and feature requests, email support@glancevnc.com .
+
+If you’re reporting an issue, include your device model, iOS or iPadOS version, app version and any error message. Do not send passwords.
+
 Making your first connection?
 
 Start with Mac Screen Sharing on your local network, then follow the Tailscale steps for access away from home.
