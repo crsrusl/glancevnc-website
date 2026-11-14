@@ -20,12 +20,10 @@ SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
 # Each route defines its metadata, body template and structured data.
 PAGES = {'/': {'title': 'GlanceVNC - VNC and RDP viewer for iPhone and iPad',
        'description': 'Connect to Mac, Windows and Linux desktops from iPhone or iPad with VNC, RDP and Mac '
-                      'Screen Sharing. Use Apple Pencil, hardware keyboards and optional '
-                      'certificate-verified TLS for compatible VNC servers.',
+                      'Screen Sharing. Connect through SSH, use Apple Pencil and customise the session toolbar.',
        'template': 'home.html',
-       'social_description': 'Remote desktops for iPhone and iPad, with Apple Pencil pointer support, '
-                             'hardware keyboards and optional certificate-verified TLS for compatible VNC '
-                             'servers.',
+       'social_description': 'VNC and RDP for iPhone and iPad, with SSH tunnelling, Home Screen widgets '
+                             'and a customisable session toolbar.',
        'structured_data': {'@context': 'https://schema.org',
                            '@type': 'MobileApplication',
                            '@id': 'https://glancevnc.com/#app',
@@ -34,8 +32,8 @@ PAGES = {'/': {'title': 'GlanceVNC - VNC and RDP viewer for iPhone and iPad',
                            'applicationCategory': 'UtilitiesApplication',
                            'applicationSubCategory': 'VNC and RDP viewer',
                            'operatingSystem': ['iOS 18.0 or later', 'iPadOS 18.0 or later'],
-                           'dateModified': '2026-11-05',
-                           'softwareVersion': '1.7',
+                           'dateModified': '2026-11-14',
+                           'softwareVersion': '1.8',
                            'downloadUrl': 'https://apps.apple.com/gb/app/glancevnc/id6768106616',
                            'description': 'GlanceVNC is a VNC and RDP viewer for iPhone and iPad running iOS '
                                           'or iPadOS 18 or later. It saves remote desktop connections, '
@@ -44,7 +42,8 @@ PAGES = {'/': {'title': 'GlanceVNC - VNC and RDP viewer for iPhone and iPad',
                                           'pointer support on iPad, hardware keyboard shortcuts, plain-text '
                                           'clipboard exchange, per-connection display preferences, and '
                                           'optional certificate-verified TLS for compatible VNC servers. RDP '
-                                          'uses TLS.',
+                                          'uses TLS. Version 1.8 adds SSH tunnelling, Home Screen widgets, Shortcuts and '
+                                          'Siri, a customisable session toolbar, app lock and iCloud sync controls.',
                            'publisher': {'@type': 'Person',
                                          '@id': 'https://glancevnc.com/#developer',
                                          'name': 'Chris Russell'},
@@ -59,7 +58,7 @@ PAGES = {'/': {'title': 'GlanceVNC - VNC and RDP viewer for iPhone and iPad',
  '/privacy.html': {'title': 'Privacy Policy - GlanceVNC',
                    'description': 'GlanceVNC privacy policy: what data is stored locally, what saved profile '
                                   'metadata can sync with private iCloud, how remote desktop credentials are '
-                                  'protected, and how direct VNC and RDP connections work.',
+                                  'protected, and how direct and SSH-tunnelled connections work.',
                    'template': 'privacy.html',
                    'image_alt': 'GlanceVNC — Remote desktops at a glance. VNC viewer for iPhone and iPad.',
                    'structured_data': {'@context': 'https://schema.org',
@@ -68,11 +67,11 @@ PAGES = {'/': {'title': 'GlanceVNC - VNC and RDP viewer for iPhone and iPad',
                                        'name': 'GlanceVNC Privacy Policy',
                                        'description': 'Privacy policy for GlanceVNC, including local '
                                                       'connection profile storage, private iCloud profile '
-                                                      'sync, Keychain password storage, direct VNC and RDP '
-                                                      'connections, nearby discovery, and data deletion.',
+                                                      'sync, Keychain password storage, SSH tunnelling, nearby '
+                                                      'discovery, and data deletion.',
                                        'url': 'https://glancevnc.com/privacy.html',
                                        'inLanguage': 'en',
-                                       'dateModified': '2026-11-05'}},
+                                       'dateModified': '2026-11-14'}},
  '/support.html': {'title': 'Support - GlanceVNC',
                    'description': 'GlanceVNC setup and support for VNC, RDP and Mac Screen Sharing, '
                                   'including Apple Pencil, hardware keyboards, clipboard text, '
@@ -223,7 +222,8 @@ PAGES = {'/': {'title': 'GlanceVNC - VNC and RDP viewer for iPhone and iPad',
                                                                                   'when iCloud is available, '
                                                                                   'including the protocol '
                                                                                   'and optional certificate '
-                                                                                  'security settings. '
+                                                                                  'security settings. Sync is on by default, and you can '
+                                                                                  'manage it under Settings → iCloud sync. '
                                                                                   'Passwords are stored '
                                                                                   'separately in Apple '
                                                                                   'Keychain and can sync '
@@ -329,19 +329,13 @@ PAGES = {'/': {'title': 'GlanceVNC - VNC and RDP viewer for iPhone and iPad',
                                                       {'@type': 'Question',
                                                        'name': 'Why does my connection time out?',
                                                        'acceptedAnswer': {'@type': 'Answer',
-                                                                          'text': 'Check that your device '
-                                                                                  'can reach the computer '
-                                                                                  'over your local network '
-                                                                                  'or through your own VPN, '
-                                                                                  'that the selected VNC or '
-                                                                                  'RDP server is running, '
-                                                                                  'and that its host, port, '
-                                                                                  'routing and firewall '
-                                                                                  'settings are correct. '
-                                                                                  'GlanceVNC connects '
-                                                                                  'directly to your server '
-                                                                                  'and does not provide a '
-                                                                                  'remote-access relay.'}},
+                                                                          'text': 'Check that the selected VNC or RDP server is running '
+                                                                                  'and that its host, port, routing and firewall settings '
+                                                                                  'are correct. If you use an SSH gateway, check that your '
+                                                                                  'device can reach the gateway and that the gateway can '
+                                                                                  'reach the desktop. For a direct connection, check that '
+                                                                                  'your device can reach the desktop over your local '
+                                                                                  'network or VPN.'}},
                                                       {'@type': 'Question',
                                                        'name': 'Why does authentication fail?',
                                                        'acceptedAnswer': {'@type': 'Answer',
@@ -649,6 +643,22 @@ PAGES = {'/': {'title': 'GlanceVNC - VNC and RDP viewer for iPhone and iPad',
                                                               'mainEntityOfPage': 'https://glancevnc.com/guides/mac-mini-ipad-vnc-tailscale/'}}}
 
 
+PAGES["/whats-new/"] = {
+    "title": "What’s New - GlanceVNC",
+    "description": "Release notes and version history for GlanceVNC on iPhone and iPad.",
+    "template": "whats-new.html",
+    "structured_data": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": DOMAIN + "/whats-new/#webpage",
+        "url": DOMAIN + "/whats-new/",
+        "name": "What’s New - GlanceVNC",
+        "inLanguage": "en-GB",
+        "about": {"@id": DOMAIN + "/#app"},
+    },
+}
+
+
 # Guides are registered once for HTML, sitemap and the generated LLM reference.
 for guide in GUIDES:
     route = '/guides/' + guide['slug'] + '/'
@@ -682,8 +692,10 @@ def header(section):
     )
 
 
-def footer():
-    return (TEMPLATES / "footer.html").read_text()
+def footer(route):
+    return Template((TEMPLATES / "footer.html").read_text()).substitute(
+        whats_new_current=' aria-current="page"' if route == "/whats-new/" else "",
+    )
 
 
 def render_page(route, page):
@@ -705,7 +717,7 @@ def render_page(route, page):
     context = {key: html.escape(value, quote=True) for key, value in metadata.items()}
     context.update(
         header=header(page.get("section", "")),
-        footer=footer(),
+        footer=footer(route),
         content=page["content"] if "content" in page else (TEMPLATES / "pages" / page["template"]).read_text(),
         extra_stylesheets="\n".join(
             f'  <link rel="stylesheet" href="{html.escape(url, quote=True)}">'

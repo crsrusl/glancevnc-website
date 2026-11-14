@@ -471,6 +471,12 @@ a:hover {
   color:var(--muted);
   font-size:.92rem;
 }
+.release-summary p + p {
+  margin-top:12px;
+}
+.release-summary .text-link {
+  margin-top:8px;
+}
 .download-band {
   color:var(--white);
   background:var(--blue);
@@ -714,6 +720,38 @@ a:hover {
 .privacy-article p {
   color:var(--muted);
   max-width:74ch;
+}
+.release-history {
+  padding-bottom:80px;
+}
+.release-history section {
+  padding-block:28px;
+  border-top:1px solid var(--line);
+  scroll-margin-top:115px;
+}
+.release-history h2 {
+  font-size:1.6rem;
+  font-variant-numeric:tabular-nums;
+}
+.release-history h2 a {
+  display:inline-flex;
+  align-items:center;
+  min-height:44px;
+}
+.release-history p,
+.release-history ul {
+  color:var(--muted);
+  max-width:74ch;
+}
+.release-history .release-date {
+  margin-bottom:12px;
+  font-size:.85rem;
+}
+.release-history ul {
+  padding-inline-start:1.25em;
+}
+.release-history li + li {
+  margin-top:10px;
 }
 .updated {
   font-size:.85rem!important;

@@ -1,16 +1,17 @@
 # GlanceVNC
 
-> Connect to Mac, Windows and Linux desktops from iPhone or iPad with VNC, RDP and Mac Screen Sharing. Use Apple Pencil, hardware keyboards and optional certificate-verified TLS for compatible VNC servers.
+> Connect to Mac, Windows and Linux desktops from iPhone or iPad with VNC, RDP and Mac Screen Sharing. Connect through SSH, use Apple Pencil and customise the session toolbar.
 
 Generated from the published page content and route table on every build. Follow the linked pages for complete instructions and their content dates. The App Store, when linked, is authoritative for release availability and regional pricing.
 
 ## Official pages
 
-- [GlanceVNC - VNC and RDP viewer for iPhone and iPad](https://glancevnc.com/): Connect to Mac, Windows and Linux desktops from iPhone or iPad with VNC, RDP and Mac Screen Sharing. Use Apple Pencil, hardware keyboards and optional certificate-verified TLS for compatible VNC servers.
-- [Privacy Policy - GlanceVNC](https://glancevnc.com/privacy.html): GlanceVNC privacy policy: what data is stored locally, what saved profile metadata can sync with private iCloud, how remote desktop credentials are protected, and how direct VNC and RDP connections work.
+- [GlanceVNC - VNC and RDP viewer for iPhone and iPad](https://glancevnc.com/): Connect to Mac, Windows and Linux desktops from iPhone or iPad with VNC, RDP and Mac Screen Sharing. Connect through SSH, use Apple Pencil and customise the session toolbar.
+- [Privacy Policy - GlanceVNC](https://glancevnc.com/privacy.html): GlanceVNC privacy policy: what data is stored locally, what saved profile metadata can sync with private iCloud, how remote desktop credentials are protected, and how direct and SSH-tunnelled connections work.
 - [Support - GlanceVNC](https://glancevnc.com/support.html): GlanceVNC setup and support for VNC, RDP and Mac Screen Sharing, including Apple Pencil, hardware keyboards, clipboard text, per-connection settings and certificate security.
 - [Remote Desktop Setup Guides | GlanceVNC](https://glancevnc.com/guides/): Practical GlanceVNC guides for connecting to your computers from iPad and iPhone over a local network or your own VPN.
 - [Mac mini from iPad: VNC & Tailscale Setup | GlanceVNC](https://glancevnc.com/guides/mac-mini-ipad-vnc-tailscale/): Set up Mac Screen Sharing, connect from your iPad with GlanceVNC, and use Tailscale for remote access to your Mac mini.
+- [What’s New - GlanceVNC](https://glancevnc.com/whats-new/): Release notes and version history for GlanceVNC on iPhone and iPad.
 - [Connect to a Windows desktop from iPhone or iPad with RDP | GlanceVNC](https://glancevnc.com/guides/windows-rdp-iphone-ipad/): Set up a supported Windows RDP host, add it to GlanceVNC, check its certificate and troubleshoot your first connection.
 - [Access a Raspberry Pi desktop from iPhone or iPad | GlanceVNC](https://glancevnc.com/guides/raspberry-pi-vnc-iphone-ipad/): Prepare a compatible Raspberry Pi VNC desktop, connect with GlanceVNC and separate network problems from authentication problems.
 - [VNC or RDP: which should you use on iPhone and iPad? | GlanceVNC](https://glancevnc.com/guides/vnc-vs-rdp/): Compare GlanceVNC’s VNC and RDP support, computer requirements, security and limitations before choosing a connection type.
@@ -23,13 +24,13 @@ Generated from the published page content and route table on every build. Follow
 
 Your desktop. Within reach.
 
-Your Mac, Windows PC or Linux desktop, on your iPhone or iPad. Connect directly with VNC and RDP.
+Your Mac, Windows PC or Linux desktop, on your iPhone or iPad. Connect with VNC and RDP.
 
 Check your setup
 
-Requires iOS or iPadOS 18+ and a computer configured for VNC, RDP or Mac Screen Sharing. Connect locally, or away from home through your own VPN.
+Requires iOS or iPadOS 18+ and a computer configured for VNC, RDP or Mac Screen Sharing. Connect on your local network. For access away from home, use your own VPN or a reachable SSH gateway that can connect to your desktop.
 
-One app purchase. No subscription. No in-app purchases. No GlanceVNC account. Direct connections.
+One app purchase. No subscription. No in-app purchases. No GlanceVNC account or hosted relay.
 
 Keep the computer. Lose the distance.
 
@@ -51,7 +52,7 @@ Bring your keyboard. Use familiar hardware keyboard shortcuts or the on-screen k
 
 Keep it yours. Direct by design.
 
-Your computer. Your connection. GlanceVNC connects directly to your server, without a hosted relay. No GlanceVNC account is required.
+Your computer. Your connection. GlanceVNC connects to your desktop directly or through your own SSH gateway. No GlanceVNC account is required.
 
 Security you can configure. RDP uses TLS. Compatible VeNCrypt VNC servers can optionally require certificate-verified TLS. Check security compatibility .
 
@@ -63,7 +64,7 @@ Mac Windows Linux & Raspberry Pi
 
 Your Mac, on your iPad.
 
-Enable Mac Screen Sharing and set a VNC password. Start on the same trusted local network, then add your own VPN for access away from home.
+Enable Mac Screen Sharing and set a VNC password. Start on the same trusted local network. For access away from home, use your own VPN or an SSH gateway.
 
 Follow the Mac mini & iPad guide GlanceVNC Screen Sharing
 
@@ -75,7 +76,7 @@ Your PC needs a compatible, reachable RDP or VNC server. Add its address and con
 
 Read RDP connection instructions GlanceVNC RDP / VNC server
 
-Start on your local network. For access away from home, use your own VPN that provides a route to your computer. RDP gateways and Azure sign-in are not supported.
+Start on your local network. For access away from home, use your own VPN or an SSH gateway that can reach your computer. RDP gateways and Azure sign-in are not supported.
 
 Your Linux machine, close at hand.
 
@@ -89,9 +90,13 @@ Requires an iPhone or iPad running iOS 18 or iPadOS 18 or later. GlanceVNC does 
 
 All setup & compatibility help
 
-New in version 1.7
+New in version 1.8
 
-A refreshed home screen, desktop thumbnails and direct access to nearby VNC computers. Apple Pencil pointer support, hardware keyboard controls, per-connection display preferences and optional certificate-verified VNC security. Explore feature help .
+Connect to VNC and RDP desktops through your own SSH gateway. Open saved connections from Home Screen widgets, Shortcuts or Siri, and put your most-used controls within reach by customising the session toolbar.
+
+Lock GlanceVNC with Face ID, Touch ID or your device passcode. Manage iCloud sync in Settings. It’s on by default and respects your choice if you’ve already turned it off.
+
+Read the release notes
 
 Your computers. One app.
 
@@ -137,6 +142,10 @@ How do I add an RDP connection?
 
 Open Saved Connections and tap Add Connection. Choose RDP, enter the host or IP address and port (3389 by default), and add the remote account username and password. Choose Windows or Linux under Operating System so hardware keyboard shortcuts use Control. The remote desktop needs a reachable RDP server. Ordinary usernames, user@domain names and DOMAIN\username are supported.
 
+How do I connect through SSH?
+
+In Add or Edit Connection, turn on Use SSH Tunnel and enter your gateway details. The gateway must be able to reach the desktop address you entered. Manage SSH keys under Settings → Keys and credentials .
+
 How does nearby discovery work?
 
 GlanceVNC finds Bonjour VNC services advertised as _rfb._tcp. on your local network. Choose a discovered desktop to connect immediately after entering its details, or save it for later. Allow Local Network access when prompted. If discovery is unavailable, check the app’s Local Network permission in system Settings, or enter the host and port manually.
@@ -146,6 +155,10 @@ Controls & display
 How do I choose Touch or Trackpad mode?
 
 During a connection, open the expanded toolbar, choose Settings, then Pointer mode. Touch positions the pointer where you tap and keeps the zoomed view still. Trackpad moves the pointer relative to your finger and follows it when zoomed in. To set a connection’s starting mode, edit that connection’s Session Preferences. Switching modes during a session keeps your zoom level.
+
+How do I customise the session toolbar?
+
+During a session, open the settings menu and choose Customize Command Bar . Add, remove or reorder the commands you want within reach.
 
 What touch gestures are available?
 
@@ -181,6 +194,10 @@ Tap the upward chevron to show the session controls, open Settings, and choose C
 
 Security & compatibility
 
+How do I lock the app?
+
+Turn on Require authentication in Settings to unlock GlanceVNC with Face ID, Touch ID or your device passcode.
+
 What sign-in method should I choose?
 
 For VNC, use Automatic for most servers. Without strict certificate security, it can select legacy Mac login when offered or standard VNC password authentication. With Require certificate security enabled on a compatible VeNCrypt server, Automatic selects a supported X.509 mode. Choose VNC password when the server requires its VNC viewer password. Mac login requires a compatible legacy Apple Remote Desktop server and cannot be combined with strict VNC security.
@@ -209,17 +226,21 @@ Saved connections & iCloud
 
 Do saved connections and passwords sync between devices?
 
-Saved connection profiles can sync through your private iCloud database when iCloud is available, including the protocol and optional certificate security settings. Passwords are stored separately in Apple Keychain and can sync through iCloud Keychain when enabled. The Operating System choice, per-connection session preferences, desktop thumbnails and custom backgrounds stay on this device.
+Saved connection profiles can sync through your private iCloud database when iCloud is available, including the protocol and optional certificate security settings. Sync is on by default, and you can manage it under Settings → iCloud sync. Passwords are stored separately in Apple Keychain and can sync through iCloud Keychain when enabled. The Operating System choice, per-connection session preferences, desktop thumbnails and custom backgrounds stay on this device.
+
+How do I open a saved connection from a widget or Siri?
+
+Add a GlanceVNC widget to your Home Screen, use Connect to Computer in Shortcuts or say “Connect to [computer] with GlanceVNC.”
 
 Where are What’s New, the privacy policy and licence notices?
 
-Open Settings from Saved Connections, Nearby Connections or the iPad sidebar. What’s New shows a text-based version history, Privacy Policy opens this website and Third-party licences shows the bundled notices without an internet connection.
+Open Settings from Saved Connections, Nearby Connections or the iPad sidebar. What’s New shows a text-based version history, also available in the website release notes . Privacy Policy opens this website and Third-party licences shows the bundled notices without an internet connection.
 
 Troubleshooting & support
 
 Why does my connection time out?
 
-Check that your device can reach the computer over your local network or through your own VPN, that the selected VNC or RDP server is running, and that its host, port, routing and firewall settings are correct. GlanceVNC connects directly to your server and does not provide a remote-access relay.
+Check that the selected VNC or RDP server is running and that its host, port, routing and firewall settings are correct. If you use an SSH gateway, check that your device can reach the gateway and that the gateway can reach the desktop. For a direct connection, check that your device can reach the desktop over your local network or VPN.
 
 Why does authentication fail?
 
@@ -237,9 +258,9 @@ Email support@glancevnc.com with your device model, iOS or iPadOS version, app v
 
 Privacy Policy
 
-GlanceVNC is designed for direct VNC and RDP connections. The app does not require a GlanceVNC account, does not run a remote desktop relay, and does not collect analytics in the app.
+GlanceVNC connects to your desktop directly or through an SSH gateway you configure. The app does not require a GlanceVNC account, does not run a remote desktop relay, and does not collect analytics in the app.
 
-Last updated: September 24, 2026
+Last updated: 14 November 2026
 
 What data does GlanceVNC collect?
 
@@ -257,9 +278,13 @@ What data syncs with iCloud?
 
 Saved profile metadata may sync through Apple's CloudKit service in your private iCloud database. This can include the connection name, host, port, optional username, protocol, sign-in method, legacy VNC sharing preference, approved RDP certificate fingerprint, optional public certificate or fingerprint used for strict security, creation date, updated date, and last connected date. VNC and RDP passwords, the Operating System choice and per-connection session preferences are not included in synced profiles.
 
+Previously shared SSH keys may still sync when iCloud sync is enabled. Manage sync under Settings → iCloud sync .
+
 How are passwords secured?
 
 VNC and RDP passwords are stored in Apple Keychain and are eligible to sync between your devices through iCloud Keychain when it is enabled. Passwords are not stored inside connection profile files or CloudKit profile records, and are not sent to the developer.
+
+SSH passwords, trusted-server approvals and newly generated or imported SSH private keys stay on your device.
 
 How does nearby discovery use the network?
 
@@ -267,7 +292,7 @@ GlanceVNC can browse the local network for Bonjour VNC services advertised as _r
 
 How are VNC and RDP connections used?
 
-When you connect, GlanceVNC opens a direct TCP connection to the host and port you configured. Authentication details are sent directly to that server as part of the selected protocol’s sign-in process. RDP uses TLS and checks server certificates; an approved certificate fingerprint is saved with the connection profile. Compatible VeNCrypt VNC servers can use optional certificate-verified TLS. Standard Mac Screen Sharing does not support this strict VNC option.
+When you connect directly, GlanceVNC opens a TCP connection to the host and port you configured. If you enable SSH tunnelling, the app connects to that host and port through your SSH gateway. The selected protocol sends desktop sign-in details to the configured desktop server. RDP uses TLS and checks server certificates; an approved certificate fingerprint is saved with the connection profile. Compatible VeNCrypt VNC servers can use optional certificate-verified TLS. Standard Mac Screen Sharing does not support this strict VNC option.
 
 Does GlanceVNC send remote desktop content to the developer?
 
